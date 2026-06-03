@@ -37,7 +37,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         b.tvAvatarInitials.text = initials.ifEmpty { "К" }
         b.tvUserName.text       = name
         b.tvUserEmail.text      = user?.email ?: ""
+        b.tvProfileName.text  = user?.displayName ?: "—"
+        b.tvProfileEmail.text = user?.email ?: "—"
 
+// Вчитај телефон од Firestore
+        val uid = FirebaseAuth.getInstance().currentUser?.uid
+        if (uid != null) {
+            Firebase.firestore.collection("users").document(uid).get()
+                .addOnSuccessListener { doc ->
+                    b.tvProfilePhone.text = doc.getString("phone") ?: "—"
+                }
+        }
         // RecyclerView setup
         adapter = VehicleAdapter(
             vehicles    = emptyList(),

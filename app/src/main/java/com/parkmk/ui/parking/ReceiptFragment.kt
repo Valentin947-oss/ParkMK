@@ -14,7 +14,7 @@ class ReceiptFragment : Fragment(R.layout.fragment_receipt) {
         super.onViewCreated(view, savedInstanceState)
         _b = FragmentReceiptBinding.bind(view)
         b.btnBackToMap.setOnClickListener {
-            findNavController().navigate(R.id.mapFragment)
+            findNavController().navigate(R.id.historyFragment)
         }
     }
     override fun onDestroyView() { super.onDestroyView(); _b = null }

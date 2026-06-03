@@ -54,10 +54,10 @@
     <string name="map_search_hint">Search parking…</string>
     <string name="map_tap_hint">Tap a pin for details</string>
 
-    <string name="active_title">Active Parking</string>
-    <string name="active_parked_label">PARKED</string>
-    <string name="active_send_sms">Send SMS and Activate</string>
-    <string name="active_stop">STOP — End billing</string>
+    <string name="active_title">Активен Паркинг</string>
+    <string name="active_parked_label">ПАРКИРАНО Време</string>
+    <string name="active_send_sms">Испрати SMS и активирај</string>
+    <string name="active_stop">СТОП — Прекини наплата</string>
     <string name="active_live_badge">LIVE</string>
 
     <string name="profile_title">Profile</string>

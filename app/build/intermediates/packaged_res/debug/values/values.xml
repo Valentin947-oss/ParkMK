@@ -19,10 +19,10 @@
     <color name="park_yellow">#F9C74F</color>
     <color name="white">#FFFFFF</color>
     <string name="active_live_badge">LIVE</string>
-    <string name="active_parked_label">PARKED</string>
-    <string name="active_send_sms">Send SMS and Activate</string>
-    <string name="active_stop">STOP — End billing</string>
-    <string name="active_title">Active Parking</string>
+    <string name="active_parked_label">ПАРКИРАНО Време</string>
+    <string name="active_send_sms">Испрати SMS и активирај</string>
+    <string name="active_stop">СТОП — Прекини наплата</string>
+    <string name="active_title">Активен Паркинг</string>
     <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
     <string name="add_vehicle_save">Save Vehicle</string>
     <string name="add_vehicle_skip">Skip for now</string>

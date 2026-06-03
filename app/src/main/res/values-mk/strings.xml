@@ -50,10 +50,9 @@
     <string name="map_search_hint">Барај паркинг…</string>
     <string name="map_tap_hint">Тапни на место за детали</string>
 
-    <string name="active_title">Активно паркирање</string>
-    <string name="active_parked_label">ПАРКИРАНО</string>
     <string name="active_send_sms">Испрати SMS и активирај</string>
     <string name="active_stop">СТОП — Прекини наплата</string>
+    <string name="active_parked_label">ПАРКИРАНО</string>
     <string name="active_live_badge">LIVE</string>
 
     <string name="profile_title">Профил</string>

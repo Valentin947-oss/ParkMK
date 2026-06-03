@@ -3202,6 +3202,9 @@ drawable ic_facebook
 drawable ic_google
 drawable ic_history
 drawable ic_keyboard_black_24dp
+drawable ic_launcher
+drawable ic_launcher_foreground
+drawable ic_launcher_round
 drawable ic_location
 drawable ic_lock
 drawable ic_logout
@@ -3919,6 +3922,9 @@ id tvPerMin
 id tvPlate
 id tvPlatePreview
 id tvPrice
+id tvProfileEmail
+id tvProfileName
+id tvProfilePhone
 id tvRateVal
 id tvRegister
 id tvSessionCost

@@ -3201,6 +3201,9 @@ int drawable ic_facebook 0x7f0700bf
 int drawable ic_google 0x7f0700c0
 int drawable ic_history 0x7f0700c1
 int drawable ic_keyboard_black_24dp 0x7f0700c2
+int drawable ic_launcher 0x7f070137
+int drawable ic_launcher_foreground 0x7f070138
+int drawable ic_launcher_round 0x7f070139
 int drawable ic_location 0x7f0700c3
 int drawable ic_lock 0x7f0700c4
 int drawable ic_logout 0x7f0700c5
@@ -3918,6 +3921,9 @@ int id tvPerMin 0x7f08024d
 int id tvPlate 0x7f08027e
 int id tvPlatePreview 0x7f08024e
 int id tvPrice 0x7f08024f
+int id tvProfileEmail 0x7f08028b
+int id tvProfileName 0x7f08028c
+int id tvProfilePhone 0x7f08028d
 int id tvRateVal 0x7f080250
 int id tvRegister 0x7f080251
 int id tvSessionCost 0x7f080283

@@ -1,15 +1,22 @@
 package com.parkmk.ui.parking
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.parkmk.R
@@ -33,6 +40,12 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
     private lateinit var spot: ParkingSpot
     private var activeVehicle: Vehicle? = null
 
+    private val notifPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        android.util.Log.d("Notif", "Permission granted: $granted")
+    }
+
     private val ticker = object : Runnable {
         override fun run() {
             val elapsed = (System.currentTimeMillis() - startMs) / 1000L
@@ -51,7 +64,6 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
         super.onViewCreated(view, savedInstanceState)
         _b = FragmentActiveParkingBinding.bind(view)
 
-        // Земи го избраниот паркинг
         val spotId = arguments?.getString("spotId") ?: "s1"
         spot = SampleData.bitolaSpots.find { it.id == spotId }
             ?: SampleData.bitolaSpots.first()
@@ -65,6 +77,16 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
         b.tvTimer.text       = "00:00:00"
         b.tvCost.text        = "0.00 ден"
         b.tvTimerStatus.text = "Притисни 'Send SMS' за да почне наплатата"
+
+        // Барај дозвола за нотификации на Android 13+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(), Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                notifPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
 
         loadVehiclesFromFirestore()
 
@@ -155,9 +177,12 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 startMs = System.currentTimeMillis()
                 handler.removeCallbacks(ticker)
                 handler.post(ticker)
+                ParkingNotificationManager.scheduleTestNotification(
+                    requireContext(), spot.name
+                )
             }
             smsSent = true
-            b.btnSendSms.text = "✓ SMS испратена на 144414"
+            b.btnSendSms.text = "✓ SMS испратена на 144414 ✓"
             b.btnSendSms.setBackgroundColor(requireContext().getColor(R.color.park_green))
             b.btnSendSms.isEnabled = false
         } catch (_: Exception) { }
@@ -165,8 +190,8 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
 
     private fun stopParking() {
         handler.removeCallbacks(ticker)
+        ParkingNotificationManager.cancelAll()
 
-        // Зачувај session во Firestore
         val uid = FirebaseAuth.getInstance().currentUser?.uid
         if (uid != null && smsSent) {
             val elapsed = (System.currentTimeMillis() - startMs) / 1000L
@@ -176,8 +201,8 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 "zoneName"    to spot.zoneName,
                 "zoneCode"    to spot.zoneId.replace("zone_", "").uppercase(),
                 "plate"       to (activeVehicle?.plate ?: ""),
-                "startTime"   to com.google.firebase.Timestamp(startMs / 1000, 0),
-                "endTime"     to com.google.firebase.firestore.FieldValue.serverTimestamp(),
+                "startTime"   to Timestamp(startMs / 1000, 0),
+                "endTime"     to FieldValue.serverTimestamp(),
                 "durationSec" to elapsed,
                 "totalCost"   to String.format("%.2f", cost).toDouble(),
                 "smsNumber"   to "144414"

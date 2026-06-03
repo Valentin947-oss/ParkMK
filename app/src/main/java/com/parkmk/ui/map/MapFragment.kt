@@ -1,8 +1,12 @@
 package com.parkmk.ui.map
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -15,6 +19,9 @@ import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
+
 
 class MapFragment : Fragment(R.layout.fragment_map) {
 
@@ -22,6 +29,13 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     private val b get() = _b!!
     private var selectedSpot: ParkingSpot? = null
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
+    private lateinit var locationOverlay: MyLocationNewOverlay
+
+    private val locationPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) enableMyLocation()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,16 +59,58 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         bottomSheetBehavior.peekHeight = 80
 
         addParkingMarkers()
+        setupLocation()
 
         b.btnParkHere?.setOnClickListener {
             selectedSpot?.let { spot ->
-                // Прати го spotId до ActiveParkingFragment
                 val bundle = Bundle().apply {
                     putString("spotId", spot.id)
                 }
                 findNavController().navigate(R.id.action_map_to_activePark, bundle)
             }
         }
+    }
+
+    private fun setupLocation() {
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            enableMyLocation()
+        } else {
+            locationPermission.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+        }
+    }
+
+    private fun enableMyLocation() {
+        locationOverlay = MyLocationNewOverlay(
+            GpsMyLocationProvider(requireContext()),
+            b.mapView
+        )
+        locationOverlay.enableMyLocation()
+
+        // Постави иконка човек за локација
+        val person = ContextCompat.getDrawable(requireContext(), R.drawable.ic_person)
+        val bitmap = android.graphics.Bitmap.createBitmap(
+            person!!.intrinsicWidth,
+            person.intrinsicHeight,
+            android.graphics.Bitmap.Config.ARGB_8888
+        )
+        val canvas = android.graphics.Canvas(bitmap)
+        person.setBounds(0, 0, canvas.width, canvas.height)
+        person.draw(canvas)
+        locationOverlay.setPersonIcon(bitmap)
+
+        locationOverlay.runOnFirstFix {
+            requireActivity().runOnUiThread {
+                b.mapView.controller.setZoom(17.0)
+                b.mapView.controller.animateTo(locationOverlay.myLocation)
+            }
+        }
+
+        b.mapView.overlays.add(0, locationOverlay)
+        b.mapView.invalidate()
     }
 
     private fun addParkingMarkers() {
@@ -87,7 +143,20 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.mapView.controller.animateTo(GeoPoint(spot.latitude, spot.longitude))
     }
 
-    override fun onResume() { super.onResume(); b.mapView.onResume() }
-    override fun onPause()  { super.onPause();  b.mapView.onPause()  }
-    override fun onDestroyView() { super.onDestroyView(); _b = null }
+    override fun onResume() {
+        super.onResume()
+        b.mapView.onResume()
+        if (::locationOverlay.isInitialized) locationOverlay.enableMyLocation()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        b.mapView.onPause()
+        if (::locationOverlay.isInitialized) locationOverlay.disableMyLocation()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _b = null
+    }
 }

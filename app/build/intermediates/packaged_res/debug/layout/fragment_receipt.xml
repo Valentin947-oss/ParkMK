@@ -30,7 +30,7 @@
         android:id="@+id/btnBackToMap"
         android:layout_width="match_parent" android:layout_height="52dp"
         android:backgroundTint="@color/park_red"
-        android:text="Назад на картата"
+        android:text="Оди во Историја на паркирање"
         android:textColor="@color/white" />
 
 </LinearLayout>

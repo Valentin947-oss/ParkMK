@@ -4,7 +4,6 @@
     <string name="active_parked_label">ПАРКИРАНО</string>
     <string name="active_send_sms">Испрати SMS и активирај</string>
     <string name="active_stop">СТОП — Прекини наплата</string>
-    <string name="active_title">Активно паркирање</string>
     <string name="add_vehicle_plate_hint">Таблица (пр. ВТ-1234-АА)</string>
     <string name="add_vehicle_save">Зачувај возило</string>
     <string name="add_vehicle_skip">Прескокни засега</string>

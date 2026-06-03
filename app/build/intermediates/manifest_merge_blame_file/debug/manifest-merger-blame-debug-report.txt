@@ -113,113 +113,113 @@
 58-->[org.osmdroid:osmdroid-android:6.1.18] C:\Users\Home\.gradle\caches\transforms-3\f5bbb79dcda9746a5aef52f1748f6f36\transformed\jetified-osmdroid-android-6.1.18\AndroidManifest.xml:25:9-33
 59
 60    <application
-60-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:11:5-70:19
+60-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:10:5-69:19
 61        android:name="com.parkmk.ParkMKApp"
-61-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:12:9-34
+61-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:11:9-34
 62        android:allowBackup="true"
-62-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:13:9-35
+62-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:12:9-35
 63        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 63-->[androidx.core:core:1.12.0] C:\Users\Home\.gradle\caches\transforms-3\bdfb213f0c16001bb22909a64bc23f55\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 64        android:debuggable="true"
 65        android:extractNativeLibs="false"
 66        android:icon="@mipmap/ic_launcher"
-66-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:14:9-43
+66-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:13:9-43
 67        android:label="@string/app_name"
-67-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:16:9-41
+67-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:15:9-41
 68        android:roundIcon="@mipmap/ic_launcher_round"
-68-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:15:9-54
+68-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:14:9-54
 69        android:supportsRtl="true"
-69-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:17:9-35
+69-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:16:9-35
 70        android:testOnly="true"
 71        android:theme="@style/Theme.ParkMK" >
-71-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:18:9-44
+71-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:17:9-44
 72        <meta-data
-72-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:20:9-22:49
+72-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:19:9-21:49
 73            android:name="com.google.android.geo.API_KEY"
-73-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:21:13-58
+73-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:20:13-58
 74            android:value="YOUR_MAPS_API_KEY" />
-74-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:22:13-46
+74-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:21:13-46
 75        <meta-data
-75-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:24:9-26:52
+75-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:23:9-25:52
 76            android:name="com.facebook.sdk.ApplicationId"
-76-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:25:13-58
+76-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:24:13-58
 77            android:value="YOUR_FACEBOOK_APP_ID" />
-77-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:26:13-49
+77-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:25:13-49
 78        <meta-data
-78-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:28:9-30:58
+78-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:27:9-29:58
 79            android:name="com.facebook.sdk.ClientToken"
-79-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:29:13-56
+79-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:28:13-56
 80            android:value="YOUR_FACEBOOK_CLIENT_TOKEN" />
-80-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:30:13-55
+80-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:29:13-55
 81
 82        <activity
-82-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:32:9-40:20
+82-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:31:9-39:20
 83            android:name="com.parkmk.ui.auth.SplashActivity"
-83-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:33:13-51
+83-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:32:13-51
 84            android:exported="true"
-84-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:34:13-36
+84-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:33:13-36
 85            android:theme="@style/Theme.ParkMK.Splash" >
-85-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:35:13-55
+85-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:34:13-55
 86            <intent-filter>
-86-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:36:13-39:29
+86-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:35:13-38:29
 87                <action android:name="android.intent.action.MAIN" />
-87-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:37:17-69
-87-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:37:25-66
+87-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:36:17-69
+87-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:36:25-66
 88
 89                <category android:name="android.intent.category.LAUNCHER" />
-89-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:38:17-77
-89-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:38:27-74
+89-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:37:17-77
+89-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:37:27-74
 90            </intent-filter>
 91        </activity>
 92        <activity
-92-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:42:9-45:58
+92-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:41:9-44:58
 93            android:name="com.parkmk.ui.auth.AuthActivity"
-93-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:43:13-49
+93-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:42:13-49
 94            android:exported="false"
-94-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:44:13-37
+94-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:43:13-37
 95            android:windowSoftInputMode="adjustResize" />
-95-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:45:13-55
+95-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:44:13-55
 96        <activity
-96-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:47:9-51:58
+96-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:46:9-50:58
 97            android:name="com.parkmk.ui.map.MainActivity"
-97-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:48:13-48
+97-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:47:13-48
 98            android:configChanges="orientation|screenSize|keyboardHidden"
-98-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:50:13-74
+98-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:49:13-74
 99            android:exported="false"
-99-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:49:13-37
+99-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:48:13-37
 100            android:windowSoftInputMode="adjustResize" />
-100-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:51:13-55
+100-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:50:13-55
 101        <activity
-101-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:53:9-56:48
+101-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:52:9-55:48
 102            android:name="com.facebook.FacebookActivity"
-102-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:54:13-57
+102-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:53:13-57
 103            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-103-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:55:13-96
+103-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:54:13-96
 104            android:label="@string/app_name"
-104-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:56:13-45
+104-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:55:13-45
 105            android:theme="@style/com_facebook_activity_theme" />
 105-->[com.facebook.android:facebook-common:16.3.0] C:\Users\Home\.gradle\caches\transforms-3\84e0a7c1534263838b3eacda1a58d695\transformed\jetified-facebook-common-16.3.0\AndroidManifest.xml:25:13-63
 106
 107        <service
-107-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:58:9-64:19
+107-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:57:9-63:19
 108            android:name="com.parkmk.service.ParkMKFirebaseMessagingService"
-108-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:59:13-67
+108-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:58:13-67
 109            android:exported="false" >
-109-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:60:13-37
+109-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:59:13-37
 110            <intent-filter>
-110-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:13-63:29
+110-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:60:13-62:29
 111                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-111-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:62:17-78
-111-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:62:25-75
+111-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:17-78
+111-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:25-75
 112            </intent-filter>
 113        </service>
 114
 115        <meta-data
-115-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:66:9-68:46
+115-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:65:9-67:46
 116            android:name="com.google.firebase.messaging.default_notification_channel_id"
-116-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:67:13-89
+116-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:66:13-89
 117            android:value="parkmk_channel" />
-117-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:68:13-43
+117-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:67:13-43
 118
 119        <activity android:name="com.facebook.CustomTabMainActivity" />
 119-->[com.facebook.android:facebook-common:16.3.0] C:\Users\Home\.gradle\caches\transforms-3\84e0a7c1534263838b3eacda1a58d695\transformed\jetified-facebook-common-16.3.0\AndroidManifest.xml:26:9-71
@@ -515,10 +515,10 @@
 275            android:exported="false" >
 275-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Home\.gradle\caches\transforms-3\314af4d99d2ac4bcaff1d5ca81ed6dfd\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:49:13-37
 276            <intent-filter android:priority="-500" >
-276-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:13-63:29
+276-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:60:13-62:29
 277                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-277-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:62:17-78
-277-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:62:25-75
+277-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:17-78
+277-->C:\Users\Home\Desktop\ParkMK-Final\app\src\main\AndroidManifest.xml:61:25-75
 278            </intent-filter>
 279        </service>
 280
