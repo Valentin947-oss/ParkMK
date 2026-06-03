@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment android:id="@+id/welcomeFragment"
+        android:name="com.parkmk.ui.auth.WelcomeFragment"
+        android:label="ParkMK">
+        <action android:id="@+id/action_welcome_to_login"
+            app:destination="@id/loginFragment" />
+        <action android:id="@+id/action_welcome_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/loginFragment"
+        android:name="com.parkmk.ui.auth.LoginFragment"
+        android:label="Login">
+        <action android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action android:id="@+id/action_login_to_forgot"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/registerFragment"
+        android:name="com.parkmk.ui.auth.RegisterFragment"
+        android:label="Register">
+        <action android:id="@+id/action_register_to_addVehicle"
+            app:destination="@id/addVehicleAuthFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/addVehicleAuthFragment"
+        android:name="com.parkmk.ui.addvehicle.AddVehicleFragment"
+        android:label="Add Vehicle" />
+
+    <fragment android:id="@+id/forgotPasswordFragment"
+        android:name="com.parkmk.ui.auth.ForgotPasswordFragment"
+        android:label="Forgot Password" />
+
+</navigation>

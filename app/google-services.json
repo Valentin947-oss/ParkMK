@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "493723588112",
+    "project_id": "parkmkd-e82d6",
+    "storage_bucket": "parkmkd-e82d6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493723588112:android:ce133fea7bbe1363b21c95",
+        "android_client_info": {
+          "package_name": "com.parkmk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLZq83sfyEO88WrGN-yvFDecrG_KNP-zU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

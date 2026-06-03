@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mapFragment">
+
+    <fragment android:id="@+id/mapFragment"
+        android:name="com.parkmk.ui.map.MapFragment"
+        android:label="Map">
+        <action android:id="@+id/action_map_to_activePark"
+            app:destination="@id/activeParkingFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/activeParkingFragment"
+        android:name="com.parkmk.ui.parking.ActiveParkingFragment"
+        android:label="Active Parking">
+        <action android:id="@+id/action_active_to_receipt"
+            app:destination="@id/receiptFragment"
+            app:popUpTo="@id/mapFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/receiptFragment"
+        android:name="com.parkmk.ui.parking.ReceiptFragment"
+        android:label="Receipt" />
+
+    <fragment android:id="@+id/historyFragment"
+        android:name="com.parkmk.ui.history.HistoryFragment"
+        android:label="History" />
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.parkmk.ui.profile.ProfileFragment"
+        android:label="Profile">
+        <action android:id="@+id/action_profile_to_addVehicle"
+            app:destination="@id/addVehicleMainFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/addVehicleMainFragment"
+        android:name="com.parkmk.ui.addvehicle.AddVehicleFragment"
+        android:label="Add Vehicle" />
+
+</navigation>

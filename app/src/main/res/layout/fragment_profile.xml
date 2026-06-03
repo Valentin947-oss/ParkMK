@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/park_gray">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/park_navy"
+        android:orientation="vertical"
+        android:padding="18dp">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:id="@+id/tvAvatarInitials"
+                android:layout_width="52dp" android:layout_height="52dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" android:textStyle="bold"
+                android:background="@color/park_red" />
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+                <TextView android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="#80FFFFFF" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Возила -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="МОИ ВОЗИЛА"
+                android:textColor="@color/park_text_tertiary"
+                android:textSize="11sp" android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvVehicles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddVehicle"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="+ Додај ново возило"
+                        android:textColor="@color/park_red"
+                        android:textSize="14sp"
+                        app:icon="@drawable/ic_add_circle"
+                        app:iconTint="@color/park_red" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SMS Info -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="SMS паркинг: 144414"
+                        android:textColor="@color/park_red"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Битола · Зона А"
+                        android:textColor="@color/park_text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sign Out -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="50dp"
+                android:text="Одјави се"
+                android:textColor="@color/park_red"
+                app:strokeColor="@color/park_red" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

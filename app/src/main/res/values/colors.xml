@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="park_navy">#1A1A2E</color>
+    <color name="park_navy_mid">#16213E</color>
+    <color name="park_navy_deep">#0F3460</color>
+    <color name="park_red">#E94560</color>
+    <color name="park_red_light">#FDE8EC</color>
+    <color name="park_red_dark">#C0314F</color>
+    <color name="park_green">#2D9E6B</color>
+    <color name="park_green_light">#EAF3DE</color>
+    <color name="park_green_dark">#3B6D11</color>
+    <color name="park_blue">#185FA5</color>
+    <color name="park_blue_light">#E6F1FB</color>
+    <color name="park_gray">#F7F7F9</color>
+    <color name="park_border">#E8E8E8</color>
+    <color name="park_text_secondary">#888888</color>
+    <color name="park_text_tertiary">#AAAAAA</color>
+    <color name="park_yellow">#F9C74F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

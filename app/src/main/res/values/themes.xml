@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ParkMK" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/park_red</item>
+        <item name="colorPrimaryVariant">@color/park_red_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/park_navy</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/park_navy</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowBackground">@color/park_gray</item>
+    </style>
+
+    <style name="Theme.ParkMK.Splash" parent="Theme.ParkMK">
+        <item name="android:windowBackground">@color/park_navy</item>
+        <item name="android:statusBarColor">@color/park_navy</item>
+    </style>
+</resources>

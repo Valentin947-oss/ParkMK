@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <!-- Таблица -->
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/park_navy"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp">
+        <TextView android:id="@+id/tvPlate"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="13sp" android:textStyle="bold"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- Ime + active -->
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:layout_marginStart="12dp">
+        <TextView android:id="@+id/tvVehicleName"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/park_navy" />
+        <TextView android:id="@+id/tvActiveBadge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="активно"
+            android:textSize="10sp" android:textColor="@color/park_green_dark"
+            android:background="@color/park_green_light"
+            android:paddingHorizontal="8dp" android:paddingVertical="2dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Постави активно -->
+    <TextView android:id="@+id/btnSetActive"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Активирај"
+        android:textColor="@color/park_red"
+        android:textSize="12sp"
+        android:padding="4dp"
+        android:visibility="gone" />
+
+    <!-- Избриши -->
+    <ImageButton android:id="@+id/btnDelete"
+        android:layout_width="32dp" android:layout_height="32dp"
+        android:src="@drawable/ic_stop"
+        android:tint="@color/park_text_tertiary"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Избриши" />
+
+</LinearLayout>

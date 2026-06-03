@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/park_gray">
+
+    <ImageView android:layout_width="72dp" android:layout_height="72dp"
+        android:src="@drawable/ic_check"
+        android:tint="@color/park_green"
+        android:background="@color/park_green_light"
+        android:padding="16dp"
+        android:contentDescription="Done"
+        android:layout_marginBottom="16dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Паркирањето завршено"
+        android:textSize="20sp" android:textStyle="bold"
+        android:textColor="@color/park_navy"
+        android:layout_marginBottom="6dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Наплатата е прекината"
+        android:textSize="13sp" android:textColor="@color/park_text_secondary"
+        android:layout_marginBottom="28dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToMap"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:backgroundTint="@color/park_red"
+        android:text="Назад на картата"
+        android:textColor="@color/white" />
+
+</LinearLayout>
