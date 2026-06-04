@@ -1,6 +1,8 @@
 package com.parkmk.ui.profile
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -15,6 +17,7 @@ import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.databinding.FragmentProfileBinding
 import com.parkmk.model.Vehicle
 import com.parkmk.ui.auth.AuthActivity
+import java.util.Locale
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
@@ -27,7 +30,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
         _b = FragmentProfileBinding.bind(view)
 
-        // Корисник инфо
         val user = repo.currentUser
         val name = user?.displayName ?: "Корисник"
         val initials = name.split(" ")
@@ -37,10 +39,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         b.tvAvatarInitials.text = initials.ifEmpty { "К" }
         b.tvUserName.text       = name
         b.tvUserEmail.text      = user?.email ?: ""
-        b.tvProfileName.text  = user?.displayName ?: "—"
-        b.tvProfileEmail.text = user?.email ?: "—"
+        b.tvProfileName.text    = user?.displayName ?: "—"
+        b.tvProfileEmail.text   = user?.email ?: "—"
 
-// Вчитај телефон од Firestore
         val uid = FirebaseAuth.getInstance().currentUser?.uid
         if (uid != null) {
             Firebase.firestore.collection("users").document(uid).get()
@@ -48,7 +49,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     b.tvProfilePhone.text = doc.getString("phone") ?: "—"
                 }
         }
-        // RecyclerView setup
+
         adapter = VehicleAdapter(
             vehicles    = emptyList(),
             onSetActive = { vehicle -> setActiveVehicle(vehicle) },
@@ -57,15 +58,16 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         b.rvVehicles.layoutManager = LinearLayoutManager(requireContext())
         b.rvVehicles.adapter = adapter
 
-        // Вчитај возила
         loadVehicles()
 
-        // Додај возило
         b.btnAddVehicle.setOnClickListener {
             findNavController().navigate(R.id.action_profile_to_addVehicle)
         }
 
-        // Sign out
+        b.btnLanguage.setOnClickListener {
+            showLanguagePicker()
+        }
+
         b.btnLogout.setOnClickListener {
             repo.signOut()
             startActivity(Intent(requireActivity(), AuthActivity::class.java))
@@ -73,14 +75,46 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         }
     }
 
+    private fun showLanguagePicker() {
+        val prefs = requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
+        val currentLang = prefs.getString("language", "mk") ?: "mk"
+        val options = arrayOf("🇲🇰  Македонски (MKD)", "🇬🇧  English (ENG)")
+        val selected = if (currentLang == "mk") 0 else 1
+
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Јазик / Language")
+            .setSingleChoiceItems(options, selected) { dialog, index ->
+                val lang = if (index == 0) "mk" else "en"
+
+                // Зачувај јазик
+                prefs.edit().putString("language", lang).apply()
+
+                // Примени јазик
+                val locale = Locale(lang)
+                Locale.setDefault(locale)
+                val config = Configuration(resources.configuration)
+                config.setLocale(locale)
+                resources.updateConfiguration(config, resources.displayMetrics)
+
+                dialog.dismiss()
+
+                // Рестартирај апликација
+                val intent = requireActivity().packageManager
+                    .getLaunchIntentForPackage(requireActivity().packageName)!!
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                requireActivity().finish()
+            }
+            .setNegativeButton("Откажи", null)
+            .show()
+    }
+
     private fun loadVehicles() {
         val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
-
         Firebase.firestore
-            .collection("users")
-            .document(uid)
-            .collection("vehicles")
-            .get()
+            .collection("users").document(uid)
+            .collection("vehicles").get()
             .addOnSuccessListener { snapshot ->
                 val vehicles = snapshot.documents.mapNotNull { doc ->
                     Vehicle(
@@ -96,30 +130,24 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                 adapter.update(vehicles)
             }
             .addOnFailureListener { e ->
-                android.util.Log.e("Profile", "Error loading vehicles: ${e.message}")
+                android.util.Log.e("Profile", "Error: ${e.message}")
             }
     }
 
     private fun setActiveVehicle(vehicle: Vehicle) {
         val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val batch = Firebase.firestore.batch()
-
         Firebase.firestore
             .collection("users").document(uid)
             .collection("vehicles").get()
             .addOnSuccessListener { snap ->
-                snap.documents.forEach {
-                    batch.update(it.reference, "active", false)
-                }
+                snap.documents.forEach { batch.update(it.reference, "active", false) }
                 batch.update(
                     Firebase.firestore.collection("users")
                         .document(uid).collection("vehicles")
-                        .document(vehicle.id),
-                    "active", true
+                        .document(vehicle.id), "active", true
                 )
-                batch.commit().addOnSuccessListener {
-                    loadVehicles()
-                }
+                batch.commit().addOnSuccessListener { loadVehicles() }
             }
     }
 
@@ -139,39 +167,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             .show()
     }
 
-    override fun onResume() {
-        super.onResume()
-        loadVehicles()
-    }
-    private fun showLanguagePicker() {
-        val languages = arrayOf("🇲🇰  Македонски", "🇬🇧  English")
-        com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Избери јазик / Choose language")
-            .setItems(languages) { _, index ->
-                val locale = when (index) {
-                    0 -> java.util.Locale("mk")
-                    else -> java.util.Locale("en")
-                }
-                setLocale(locale)
-            }
-            .show()
-    }
-
-    private fun setLocale(locale: java.util.Locale) {
-        java.util.Locale.setDefault(locale)
-        val config = android.content.res.Configuration()
-        config.setLocale(locale)
-        requireContext().createConfigurationContext(config)
-
-        // Зачувај во SharedPreferences
-        requireContext().getSharedPreferences("settings", android.content.Context.MODE_PRIVATE)
-            .edit().putString("language", locale.language).apply()
-
-        // Рестартирај Activity
-        requireActivity().recreate()
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _b = null
-    }
+    override fun onResume() { super.onResume(); loadVehicles() }
+    override fun onDestroyView() { super.onDestroyView(); _b = null }
 }
