@@ -90,17 +90,18 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         )
         locationOverlay.enableMyLocation()
 
-        // Постави иконка човек за локација
-        val person = ContextCompat.getDrawable(requireContext(), R.drawable.ic_person)
-        val bitmap = android.graphics.Bitmap.createBitmap(
-            person!!.intrinsicWidth,
-            person.intrinsicHeight,
-            android.graphics.Bitmap.Config.ARGB_8888
-        )
-        val canvas = android.graphics.Canvas(bitmap)
-        person.setBounds(0, 0, canvas.width, canvas.height)
-        person.draw(canvas)
-        locationOverlay.setPersonIcon(bitmap)
+        // Постави person иконка
+        val personDrawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_person)
+        if (personDrawable != null) {
+            personDrawable.setTint(resources.getColor(R.color.park_red, null))
+            val size = 64
+            val bitmap = android.graphics.Bitmap.createBitmap(size, size, android.graphics.Bitmap.Config.ARGB_8888)
+            val canvas = android.graphics.Canvas(bitmap)
+            personDrawable.setBounds(0, 0, size, size)
+            personDrawable.draw(canvas)
+            locationOverlay.setPersonIcon(bitmap)
+            locationOverlay.setDirectionIcon(bitmap)
+        }
 
         locationOverlay.runOnFirstFix {
             requireActivity().runOnUiThread {

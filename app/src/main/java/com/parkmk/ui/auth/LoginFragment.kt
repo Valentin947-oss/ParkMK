@@ -60,11 +60,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         // Facebook
         callbackManager = CallbackManager.Factory.create()
-        LoginManager.getInstance().registerCallback(callbackManager,
+        LoginManager.getInstance().registerCallback(
+            callbackManager,
             object : FacebookCallback<LoginResult> {
                 override fun onSuccess(result: LoginResult) {
                     vm.signInWithFacebook(result.accessToken)
                 }
+
                 override fun onCancel() {}
                 override fun onError(error: FacebookException) {
                     showError("Facebook грешка: ${error.message}")
@@ -94,16 +96,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         // Observe auth state
         viewLifecycleOwner.lifecycleScope.launch {
             vm.state.collect { state ->
-                b.progressBar.isVisible = state is UiState.Loading
-                b.btnLogin.isEnabled    = state !is UiState.Loading
-
                 when (state) {
                     is UiState.Success -> {
-                        // Зачувај FCM token во Firestore
-                        showSuccess()
                         (requireActivity() as AuthActivity).goToMain()
                     }
-                    is UiState.Error -> showError(state.message)
+
+                    is UiState.Error -> {
+                        Snackbar.make(b.root, state.message, Snackbar.LENGTH_LONG).show()
+                    }
+
+                    is UiState.Loading -> {}
                     else -> {}
                 }
             }

@@ -59,8 +59,6 @@ class AuthViewModel(private val repo: FirebaseRepository) : ViewModel() {
             try {
                 val user = block()
                 if (user != null) {
-                    val token = repo.getFcmToken()
-                    repo.updateFcmToken(token)
                     _state.value = UiState.Success(user)
                 }
             } catch (e: Exception) {

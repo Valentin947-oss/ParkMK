@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_fragment_login.xml.flat",
-        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_login.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\navigation_nav_auth.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\navigation\\nav_auth.xml"
+    },
+    {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_login.xml"
     },
     {
         "merged": "com.parkmk.app-merged_res-67:/layout_fragment_profile.xml.flat",
@@ -20,10 +20,6 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_location.xml"
     },
     {
-        "merged": "com.parkmk.app-merged_res-67:/drawable_ic_launcher_round.xml.flat",
-        "source": "com.parkmk.app-main-69:/drawable/ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\menu_menu_bottom_nav.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\menu\\menu_bottom_nav.xml"
     },
@@ -36,16 +32,8 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_active_parking.xml"
     },
     {
-        "merged": "com.parkmk.app-merged_res-67:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.parkmk.app-main-69:/drawable/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_fragment_add_vehicle.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_add_vehicle.xml"
-    },
-    {
-        "merged": "com.parkmk.app-merged_res-67:/drawable_ic_launcher.xml.flat",
-        "source": "com.parkmk.app-main-69:/drawable/ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_search.xml.flat",
@@ -144,6 +132,10 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_history.xml"
     },
     {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_email.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_email.xml"
     },
@@ -162,6 +154,10 @@
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -188,12 +184,12 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_receipt.xml"
     },
     {
-        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\navigation_nav_main.xml.flat",
-        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\navigation\\nav_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_notification.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\navigation_nav_main.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\navigation\\nav_main.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_add_circle.xml.flat",
@@ -210,5 +206,9 @@
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_launcher_round.xml"
     }
 ]

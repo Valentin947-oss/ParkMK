@@ -59,14 +59,17 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
         // Facebook setup
         callbackManager = CallbackManager.Factory.create()
-        LoginManager.getInstance().registerCallback(callbackManager,
+        LoginManager.getInstance().registerCallback(
+            callbackManager,
             object : FacebookCallback<LoginResult> {
                 override fun onSuccess(result: LoginResult) {
                     vm.signInWithFacebook(result.accessToken)
                 }
+
                 override fun onCancel() {}
                 override fun onError(error: FacebookException) {
-                    Snackbar.make(b.root, "Facebook грешка: ${error.message}", Snackbar.LENGTH_LONG).show()
+                    Snackbar.make(b.root, "Facebook грешка: ${error.message}", Snackbar.LENGTH_LONG)
+                        .show()
                 }
             })
 
@@ -93,8 +96,15 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         viewLifecycleOwner.lifecycleScope.launch {
             vm.state.collect { state ->
                 when (state) {
-                    is UiState.Success -> (requireActivity() as AuthActivity).goToMain()
-                    is UiState.Error -> Snackbar.make(b.root, state.message, Snackbar.LENGTH_LONG).show()
+                    is UiState.Success -> {
+                        (requireActivity() as AuthActivity).goToMain()
+                    }
+
+                    is UiState.Error -> {
+                        Snackbar.make(b.root, state.message, Snackbar.LENGTH_LONG).show()
+                    }
+
+                    is UiState.Loading -> {}
                     else -> {}
                 }
             }

@@ -31,6 +31,14 @@ class MainActivity : AppCompatActivity() {
             val hideOn = setOf(R.id.activeParkingFragment, R.id.receiptFragment, R.id.addVehicleMainFragment)
             binding.bottomNav?.visibility = if (dest.id in hideOn) View.GONE else View.VISIBLE
         }
+        // Примени зачуван јазик
+        val lang = getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
     }
 
     fun goToLogin() {

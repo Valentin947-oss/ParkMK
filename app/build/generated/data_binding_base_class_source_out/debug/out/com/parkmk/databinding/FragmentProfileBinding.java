@@ -25,6 +25,9 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final MaterialButton btnAddVehicle;
 
   @NonNull
+  public final MaterialButton btnLanguage;
+
+  @NonNull
   public final MaterialButton btnLogout;
 
   @NonNull
@@ -49,13 +52,14 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final TextView tvUserName;
 
   private FragmentProfileBinding(@NonNull LinearLayout rootView,
-      @NonNull MaterialButton btnAddVehicle, @NonNull MaterialButton btnLogout,
-      @NonNull RecyclerView rvVehicles, @NonNull TextView tvAvatarInitials,
-      @NonNull TextView tvProfileEmail, @NonNull TextView tvProfileName,
-      @NonNull TextView tvProfilePhone, @NonNull TextView tvUserEmail,
-      @NonNull TextView tvUserName) {
+      @NonNull MaterialButton btnAddVehicle, @NonNull MaterialButton btnLanguage,
+      @NonNull MaterialButton btnLogout, @NonNull RecyclerView rvVehicles,
+      @NonNull TextView tvAvatarInitials, @NonNull TextView tvProfileEmail,
+      @NonNull TextView tvProfileName, @NonNull TextView tvProfilePhone,
+      @NonNull TextView tvUserEmail, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.btnAddVehicle = btnAddVehicle;
+    this.btnLanguage = btnLanguage;
     this.btnLogout = btnLogout;
     this.rvVehicles = rvVehicles;
     this.tvAvatarInitials = tvAvatarInitials;
@@ -96,6 +100,12 @@ public final class FragmentProfileBinding implements ViewBinding {
       id = R.id.btnAddVehicle;
       MaterialButton btnAddVehicle = ViewBindings.findChildViewById(rootView, id);
       if (btnAddVehicle == null) {
+        break missingId;
+      }
+
+      id = R.id.btnLanguage;
+      MaterialButton btnLanguage = ViewBindings.findChildViewById(rootView, id);
+      if (btnLanguage == null) {
         break missingId;
       }
 
@@ -147,9 +157,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((LinearLayout) rootView, btnAddVehicle, btnLogout,
-          rvVehicles, tvAvatarInitials, tvProfileEmail, tvProfileName, tvProfilePhone, tvUserEmail,
-          tvUserName);
+      return new FragmentProfileBinding((LinearLayout) rootView, btnAddVehicle, btnLanguage,
+          btnLogout, rvVehicles, tvAvatarInitials, tvProfileEmail, tvProfileName, tvProfilePhone,
+          tvUserEmail, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

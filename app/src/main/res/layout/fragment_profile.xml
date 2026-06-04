@@ -205,7 +205,16 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+            <!-- Јазик -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLanguage"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="🌐  Јазик / Language"
+                android:textColor="@color/park_navy"
+                android:layout_marginBottom="10dp"
+                app:strokeColor="@color/park_border" />
             <!-- Sign Out -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"

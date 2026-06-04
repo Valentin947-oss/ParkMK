@@ -143,7 +143,33 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onResume()
         loadVehicles()
     }
+    private fun showLanguagePicker() {
+        val languages = arrayOf("🇲🇰  Македонски", "🇬🇧  English")
+        com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Избери јазик / Choose language")
+            .setItems(languages) { _, index ->
+                val locale = when (index) {
+                    0 -> java.util.Locale("mk")
+                    else -> java.util.Locale("en")
+                }
+                setLocale(locale)
+            }
+            .show()
+    }
 
+    private fun setLocale(locale: java.util.Locale) {
+        java.util.Locale.setDefault(locale)
+        val config = android.content.res.Configuration()
+        config.setLocale(locale)
+        requireContext().createConfigurationContext(config)
+
+        // Зачувај во SharedPreferences
+        requireContext().getSharedPreferences("settings", android.content.Context.MODE_PRIVATE)
+            .edit().putString("language", locale.language).apply()
+
+        // Рестартирај Activity
+        requireActivity().recreate()
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _b = null
