@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ParkMK</string>
+    <string name="app_tagline">Bitola parking</string>
+
+    <string name="welcome_sign_in">Sign In</string>
+    <string name="welcome_register">Create Account</string>
+    <string name="welcome_continue_anonymous">Continue without account</string>
+
+    <string name="login_title">Welcome</string>
+    <string name="login_subtitle">Sign in to your account</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_button">Sign In</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_with_google">Continue with Google</string>
+    <string name="login_with_facebook">Continue with Facebook</string>
+    <string name="login_or_divider">or</string>
+
+    <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">YOUR_FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token" translatable="false">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+
+    <string name="register_title">Create Account</string>
+    <string name="register_subtitle">Join ParkMK</string>
+    <string name="register_name_hint">Full Name (latin)</string>
+    <string name="register_email_hint">Email</string>
+    <string name="register_phone_hint">Phone (+389…)</string>
+    <string name="register_password_hint">Password (min. 8 characters)</string>
+    <string name="register_confirm_password_hint">Confirm password</string>
+    <string name="register_button">Create Account</string>
+    <string name="register_have_account">Already have an account?</string>
+
+    <string name="forgot_title">Reset Password</string>
+    <string name="forgot_subtitle">We\'ll send a link to your email</string>
+    <string name="forgot_email_hint">Email address</string>
+    <string name="forgot_send_button">Send Reset Link</string>
+    <string name="forgot_back_to_login">Back to Login</string>
+    <string name="forgot_email_sent">Reset link sent to %s</string>
+
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">Enter a valid email</string>
+    <string name="error_password_too_short">Min. 8 characters</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_generic">Something went wrong</string>
+
+    <string name="nav_map">Map</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="map_title">Parking Zones</string>
+    <string name="map_subtitle">Bitola · per-minute billing</string>
+    <string name="map_search_hint">Search parking…</string>
+    <string name="map_tap_hint">Tap a pin for details</string>
+
+    <string name="active_title">Active Parking</string>
+    <string name="active_parked_label">PARKED Time</string>
+    <string name="active_send_sms">Send SMS and activate</string>
+    <string name="active_stop">STOP — End billing</string>
+    <string name="active_live_badge">LIVE</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_logout">Sign Out</string>
+
+    <string name="history_title">History</string>
+    <string name="history_empty">No parking sessions yet</string>
+
+    <string name="add_vehicle_title">Add Vehicle</string>
+    <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
+    <string name="add_vehicle_save">Save vehicle</string>
+    <string name="add_vehicle_skip">Continue</string>
+
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="loading">Loading…</string>
+</resources>
