@@ -12,6 +12,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.parkmk.R
 import com.parkmk.databinding.FragmentHistoryBinding
+import com.parkmk.util.AnalyticsHelper
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -24,6 +25,7 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
         super.onViewCreated(view, savedInstanceState)
         _b = FragmentHistoryBinding.bind(view)
         loadHistory()
+        AnalyticsHelper.logScreen("history_screen")
     }
 
     private fun loadHistory() {

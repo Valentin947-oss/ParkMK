@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.parkmk.R
 import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.databinding.FragmentAddVehicleBinding
+import com.parkmk.util.AnalyticsHelper
 import kotlinx.coroutines.launch
 
 class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
@@ -90,7 +91,7 @@ class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
                 }
             }
         }
-
+        AnalyticsHelper.logVehicleAdded("CAR")
         // Прескокни
         b.btnSkip?.setOnClickListener {
             findNavController().navigateUp()

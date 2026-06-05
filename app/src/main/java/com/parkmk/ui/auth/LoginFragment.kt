@@ -19,6 +19,7 @@ import com.parkmk.R
 import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.databinding.FragmentLoginBinding
 import com.parkmk.model.UiState
+import com.parkmk.util.AnalyticsHelper
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -92,7 +93,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         b.tvRegister.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_register)
         }
-
+        AnalyticsHelper.logLogin("email")
         // Observe auth state
         viewLifecycleOwner.lifecycleScope.launch {
             vm.state.collect { state ->

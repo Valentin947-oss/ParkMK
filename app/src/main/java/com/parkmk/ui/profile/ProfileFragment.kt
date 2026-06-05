@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
+import com.parkmk.ui.map.MainActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,7 @@ import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.databinding.FragmentProfileBinding
 import com.parkmk.model.Vehicle
 import com.parkmk.ui.auth.AuthActivity
+import com.parkmk.util.AnalyticsHelper
 import java.util.Locale
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
@@ -85,29 +87,32 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             .setTitle("Јазик / Language")
             .setSingleChoiceItems(options, selected) { dialog, index ->
                 val lang = if (index == 0) "mk" else "en"
-
-                // Зачувај јазик
                 prefs.edit().putString("language", lang).apply()
-
-                // Примени јазик
-                val locale = Locale(lang)
-                Locale.setDefault(locale)
-                val config = Configuration(resources.configuration)
-                config.setLocale(locale)
-                resources.updateConfiguration(config, resources.displayMetrics)
-
                 dialog.dismiss()
+                AnalyticsHelper.logLanguageChanged(lang)
 
-                // Рестартирај апликација
-                val intent = requireActivity().packageManager
-                    .getLaunchIntentForPackage(requireActivity().packageName)!!
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-                requireActivity().finish()
+                // Директно рестартирај го процесот
+                val intent = Intent(requireContext(), com.parkmk.ui.auth.SplashActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                requireContext().startActivity(intent)
+                android.os.Process.killProcess(android.os.Process.myPid())
             }
             .setNegativeButton("Откажи", null)
             .show()
+    }
+
+    private fun updateTexts(lang: String) {
+        // Рачно ажурирај ги текстовите во ProfileFragment
+        if (lang == "en") {
+            b.btnLogout.text = "Sign Out"
+            b.btnAddVehicle.text = "Add Vehicle"
+            b.btnLanguage.text = "Language"
+            // додај ги сите текстови што ги имаш
+        } else {
+            b.btnLogout.text = "Одјави се"
+            b.btnAddVehicle.text = "Додај возило"
+            b.btnLanguage.text = "Јазик / Language"
+        }
     }
 
     private fun loadVehicles() {

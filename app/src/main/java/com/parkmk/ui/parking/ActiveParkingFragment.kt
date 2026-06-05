@@ -25,6 +25,7 @@ import com.parkmk.model.ParkingSpot
 import com.parkmk.model.SampleData
 import com.parkmk.model.Vehicle
 import com.parkmk.ui.profile.VehiclePickerDialog
+import com.parkmk.util.AnalyticsHelper
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
@@ -182,6 +183,11 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 )
             }
             smsSent = true
+            AnalyticsHelper.logSmsSent(
+                spot.zoneId.replace("zone_", "").uppercase(),
+                activeVehicle?.plate ?: ""
+            )
+            AnalyticsHelper.logParkingStarted(spot.name, spot.zoneName, spot.pricePerHour)
             b.btnSendSms.text = "✓ SMS испратена на 144414 ✓"
             b.btnSendSms.setBackgroundColor(requireContext().getColor(R.color.park_green))
             b.btnSendSms.isEnabled = false
@@ -204,7 +210,7 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 "startTime"   to Timestamp(startMs / 1000, 0),
                 "endTime"     to FieldValue.serverTimestamp(),
                 "durationSec" to elapsed,
-                "totalCost"   to String.format("%.2f", cost).toDouble(),
+                "totalCost" to Math.round(cost * 100.0) / 100.0,
                 "smsNumber"   to "144414"
             )
             Firebase.firestore

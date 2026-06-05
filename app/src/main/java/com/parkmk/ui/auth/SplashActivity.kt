@@ -11,9 +11,19 @@ import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.ui.map.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import android.content.Context
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
+    override fun attachBaseContext(newBase: Context) {
+        val lang = newBase.getSharedPreferences("settings", Context.MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = android.content.res.Configuration(newBase.resources.configuration)
+        config.setLocale(locale)
+        super.attachBaseContext(newBase.createConfigurationContext(config))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

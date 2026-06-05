@@ -15,6 +15,7 @@ import com.parkmk.R
 import com.parkmk.databinding.FragmentMapBinding
 import com.parkmk.model.ParkingSpot
 import com.parkmk.model.SampleData
+import com.parkmk.util.AnalyticsHelper
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
@@ -69,6 +70,7 @@ class MapFragment : Fragment(R.layout.fragment_map) {
                 findNavController().navigate(R.id.action_map_to_activePark, bundle)
             }
         }
+        AnalyticsHelper.logScreen("map_screen")
     }
 
     private fun setupLocation() {

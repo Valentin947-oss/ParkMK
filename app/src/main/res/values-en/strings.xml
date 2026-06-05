@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ParkMK</string>
+    <string name="app_name">ParkMK - EN</string>
     <string name="app_tagline">Bitola parking</string>
 
     <string name="welcome_sign_in">Sign In</string>

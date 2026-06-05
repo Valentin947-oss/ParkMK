@@ -183,9 +183,6 @@ string error_generic
 string error_invalid_email
 string error_password_too_short
 string error_passwords_dont_match
-string facebook_app_id
-string facebook_client_token
-string fb_login_protocol_scheme
 string forgot_back_to_login
 string forgot_email_hint
 string forgot_email_sent
@@ -234,3 +231,4 @@ string welcome_register
 string welcome_sign_in
 style Theme.ParkMK
 style Theme.ParkMK.Splash
+xml locales_config

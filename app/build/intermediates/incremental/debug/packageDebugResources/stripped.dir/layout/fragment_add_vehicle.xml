@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1A1A2E"
+    android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#20FFFFFF"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/white"
+                android:contentDescription="Back" />
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/add_vehicle_title"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Таблата се чува за брз избор"
+                    android:textColor="#80FFFFFF" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Plate input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPlate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/add_vehicle_plate_hint"
+            app:boxStrokeColor="@color/park_red"
+            app:hintTextColor="#80FFFFFF"
+            app:boxBackgroundColor="#15FFFFFF">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPlate"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/white"
+                android:textSize="18sp" android:textStyle="bold"
+                android:letterSpacing="0.05" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Plate preview -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#15FFFFFF"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout android:layout_width="32dp" android:layout_height="40dp"
+                    android:background="#003087"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="MK" android:textColor="@color/white" android:textSize="9sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:background="#F5F5F5"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp">
+                    <TextView android:id="@+id/tvPlatePreview"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ВТ 0000 АА"
+                        android:textColor="#111111"
+                        android:textSize="20sp" android:textStyle="bold"
+                        android:letterSpacing="0.08" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Nickname -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNick"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Назив (опционално)"
+            app:boxStrokeColor="@color/park_red"
+            app:hintTextColor="#80FFFFFF"
+            app:boxBackgroundColor="#15FFFFFF">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNick"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:backgroundTint="@color/park_green"
+            android:text="@string/add_vehicle_save"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSkip"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="46dp"
+            android:text="@string/add_vehicle_skip"
+            android:textColor="#80FFFFFF"
+            app:strokeColor="#40FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
