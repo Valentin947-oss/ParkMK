@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\activity_splash.xml"
     },
     {
+        "merged": "com.parkmk.app-mergeDebugResources-66:/layout/item_session.xml",
+        "source": "com.parkmk.app-main-69:/layout/item_session.xml"
+    },
+    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\activity_main.xml",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\activity_main.xml"
     },
@@ -54,10 +58,6 @@
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\item_vehicle.xml",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\item_vehicle.xml"
-    },
-    {
-        "merged": "com.parkmk.app-mergeDebugResources-66:/layout/item_vehicle.xml",
-        "source": "com.parkmk.app-main-69:/layout/item_vehicle.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\fragment_add_vehicle.xml",

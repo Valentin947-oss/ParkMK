@@ -76,6 +76,14 @@
     <string name="history_title">Историја</string>
     <string name="history_empty">Сè уште нема паркирања</string>
 
+    <string name="history_start">Почеток</string>
+    <string name="history_end">Крај</string>
+    <string name="history_duration">Траење</string>
+    <string name="currency">ден</string>
+    <string name="time_min">мин</string>
+    <string name="time_sec">сек</string>
+    <string name="label_vehicle">Возило</string>
+
     <string name="add_vehicle_title">Додај возило</string>
     <string name="add_vehicle_plate_hint">Таблица (пр. ВТ-1234-АА)</string>
     <string name="add_vehicle_save">Зачувај возило</string>

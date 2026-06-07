@@ -4328,6 +4328,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string compass
 string copy_toast_msg
+string currency
 string cyclemap
 string default_web_client_id
 string den_per_min_unit
@@ -4375,10 +4376,14 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string hills
+string history_duration
 string history_empty
+string history_end
+string history_start
 string history_title
 string icon_content_description
 string item_view_role_description
+string label_vehicle
 string language_switch
 string loading
 string login_button
@@ -4550,6 +4555,8 @@ string sms_to_number
 string snapshot
 string states
 string status_bar_notification_info_overflow
+string time_min
+string time_sec
 string topo
 string unknown
 string vehicle_activate

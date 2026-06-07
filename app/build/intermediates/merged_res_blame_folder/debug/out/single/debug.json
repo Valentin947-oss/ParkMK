@@ -1,15 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\navigation_nav_auth.xml.flat",
-        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\navigation\\nav_auth.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_fragment_login.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "com.parkmk.app-merged_res-67:/menu_menu_bottom_nav.xml.flat",
-        "source": "com.parkmk.app-main-69:/menu/menu_bottom_nav.xml"
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\navigation_nav_auth.xml.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\navigation\\nav_auth.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_activity_splash.xml.flat",
@@ -44,12 +40,12 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_search.xml"
     },
     {
-        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout_fragment_welcome.xml.flat",
@@ -166,6 +162,10 @@
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "com.parkmk.app-merged_res-67:/layout_item_session.xml.flat",
+        "source": "com.parkmk.app-main-69:/layout/item_session.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\layout-sw600dp_activity_main.xml.flat",

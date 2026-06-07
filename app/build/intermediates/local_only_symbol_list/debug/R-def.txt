@@ -178,6 +178,7 @@ string app_name
 string app_tagline
 string btn_cancel
 string btn_confirm
+string currency
 string default_web_client_id
 string den_per_min_unit
 string error_field_required
@@ -199,8 +200,12 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string history_duration
 string history_empty
+string history_end
+string history_start
 string history_title
+string label_vehicle
 string language_switch
 string loading
 string login_button
@@ -242,6 +247,8 @@ string select_vehicle_first
 string sms_active
 string sms_sent_success
 string sms_to_number
+string time_min
+string time_sec
 string vehicle_activate
 string vehicle_active_badge
 string welcome_continue_anonymous

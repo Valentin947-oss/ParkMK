@@ -4327,6 +4327,7 @@ int string common_signin_button_text 0x7f120072
 int string common_signin_button_text_long 0x7f120073
 int string compass 0x7f120074
 int string copy_toast_msg 0x7f120075
+int string currency 0x7f12015b
 int string cyclemap 0x7f120076
 int string default_web_client_id 0x7f120077
 int string den_per_min_unit 0x7f120078
@@ -4374,10 +4375,14 @@ int string google_crash_reporting_api_key 0x7f1200a1
 int string google_storage_bucket 0x7f1200a2
 int string hide_bottom_view_on_scroll_behavior 0x7f1200a3
 int string hills 0x7f1200a4
+int string history_duration 0x7f12015c
 int string history_empty 0x7f1200a5
+int string history_end 0x7f12015d
+int string history_start 0x7f12015e
 int string history_title 0x7f1200a6
 int string icon_content_description 0x7f1200a7
 int string item_view_role_description 0x7f1200a8
+int string label_vehicle 0x7f120161
 int string language_switch 0x7f1200a9
 int string loading 0x7f1200aa
 int string login_button 0x7f1200ab
@@ -4549,6 +4554,8 @@ int string sms_to_number 0x7f120150
 int string snapshot 0x7f120151
 int string states 0x7f120152
 int string status_bar_notification_info_overflow 0x7f120153
+int string time_min 0x7f12015f
+int string time_sec 0x7f120160
 int string topo 0x7f120154
 int string unknown 0x7f120155
 int string vehicle_activate 0x7f120159

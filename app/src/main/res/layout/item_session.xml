@@ -46,7 +46,7 @@
             android:layout_marginBottom="4dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Возило"
+                android:text="@string/label_vehicle"
                 android:textSize="12sp" android:textColor="@color/park_text_secondary" />
             <TextView android:id="@+id/tvSessionPlate"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:layout_marginBottom="4dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Траење"
+                android:text="@string/history_duration"
                 android:textSize="12sp" android:textColor="@color/park_text_secondary" />
             <TextView android:id="@+id/tvSessionDur"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             android:layout_marginBottom="4dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Почеток"
+                android:text="@string/history_start"
                 android:textSize="12sp" android:textColor="@color/park_text_secondary" />
             <TextView android:id="@+id/tvSessionStart"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
             android:layout_marginBottom="4dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Крај"
+                android:text="@string/history_end"
                 android:textSize="12sp" android:textColor="@color/park_text_secondary" />
             <TextView android:id="@+id/tvSessionEnd"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"

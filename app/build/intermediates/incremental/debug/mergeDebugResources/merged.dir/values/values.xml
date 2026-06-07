@@ -2135,6 +2135,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="compass">Compass</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="currency">ден</string>
     <string name="cyclemap">Cycle Map</string>
     <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
     <string name="den_per_min_unit"/>
@@ -2184,10 +2185,14 @@
     <string name="google_storage_bucket" translatable="false">parkmkd-e82d6.firebasestorage.app</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="hills">Hills</string>
+    <string name="history_duration">Траење</string>
     <string name="history_empty">Сè уште нема паркирања</string>
+    <string name="history_end">Крај</string>
+    <string name="history_start">Почеток</string>
     <string name="history_title">Историја</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="label_vehicle">Возило</string>
     <string name="language_switch">🌐 Јазик </string>
     <string name="loading">Се вчитува…</string>
     <string name="login_button">Влези</string>
@@ -2367,6 +2372,8 @@
     <string name="snapshot">Snapshot</string>
     <string name="states">States</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="time_min">мин</string>
+    <string name="time_sec">сек</string>
     <string name="topo">Topographic</string>
     <string name="unknown">Unknown</string>
     <string name="vehicle_activate">Активирај</string>

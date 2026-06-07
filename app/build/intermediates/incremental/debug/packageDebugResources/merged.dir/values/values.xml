@@ -32,6 +32,7 @@
     <string name="app_tagline">Битола паркинг · по минута</string>
     <string name="btn_cancel">Откажи</string>
     <string name="btn_confirm">Потврди</string>
+    <string name="currency">ден</string>
     <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
     <string name="den_per_min_unit"/>
     <string name="error_field_required">Ова поле е задолжително</string>
@@ -53,8 +54,12 @@
     <string name="google_app_id" translatable="false">1:493723588112:android:ce133fea7bbe1363b21c95</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDLZq83sfyEO88WrGN-yvFDecrG_KNP-zU</string>
     <string name="google_storage_bucket" translatable="false">parkmkd-e82d6.firebasestorage.app</string>
+    <string name="history_duration">Траење</string>
     <string name="history_empty">Сè уште нема паркирања</string>
+    <string name="history_end">Крај</string>
+    <string name="history_start">Почеток</string>
     <string name="history_title">Историја</string>
+    <string name="label_vehicle">Возило</string>
     <string name="language_switch">🌐 Јазик </string>
     <string name="loading">Се вчитува…</string>
     <string name="login_button">Влези</string>
@@ -96,6 +101,8 @@
     <string name="sms_active">✓ SMS активна · тече наплата</string>
     <string name="sms_sent_success">✓ SMS испратена на 144414</string>
     <string name="sms_to_number">На број: 144414</string>
+    <string name="time_min">мин</string>
+    <string name="time_sec">сек</string>
     <string name="vehicle_activate">Активирај</string>
     <string name="vehicle_active_badge">активно</string>
     <string name="welcome_continue_anonymous">Продолжи без профил</string>
