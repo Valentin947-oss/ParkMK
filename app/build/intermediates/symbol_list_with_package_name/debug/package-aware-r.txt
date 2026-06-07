@@ -4379,6 +4379,7 @@ string history_empty
 string history_title
 string icon_content_description
 string item_view_role_description
+string language_switch
 string loading
 string login_button
 string login_email_hint
@@ -4512,8 +4513,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string profile_email_label
 string profile_logout
+string profile_my_vehicles
+string profile_name_label
+string profile_phone_label
 string profile_title
+string profile_user_data
 string project_id
 string public_transport
 string register_button
@@ -4546,6 +4552,8 @@ string states
 string status_bar_notification_info_overflow
 string topo
 string unknown
+string vehicle_activate
+string vehicle_active_badge
 string welcome_continue_anonymous
 string welcome_register
 string welcome_sign_in

@@ -31,6 +31,7 @@
     <string name="forgot_title">Reset Password</string>
     <string name="history_empty">No parking sessions yet</string>
     <string name="history_title">History</string>
+    <string name="language_switch">🌐 Language</string>
     <string name="loading">Loading…</string>
     <string name="login_button">Sign In</string>
     <string name="login_email_hint">Email</string>
@@ -50,8 +51,13 @@
     <string name="nav_map">Map</string>
     <string name="nav_profile">Profile</string>
     <string name="no_vehicle">No vehicle → tap to select</string>
+    <string name="profile_email_label">Email</string>
     <string name="profile_logout">Sign Out</string>
+    <string name="profile_my_vehicles">MY VEHICLES</string>
+    <string name="profile_name_label">Full name</string>
+    <string name="profile_phone_label">Phone</string>
     <string name="profile_title">Profile</string>
+    <string name="profile_user_data">USER DATA</string>
     <string name="register_button">Create Account</string>
     <string name="register_confirm_password_hint">Confirm password</string>
     <string name="register_email_hint">Email</string>
@@ -65,6 +71,8 @@
     <string name="sms_active">✓ SMS active · billing running</string>
     <string name="sms_sent_success">✓ SMS sent to 144414</string>
     <string name="sms_to_number">To number: 144414</string>
+    <string name="vehicle_activate">Activate</string>
+    <string name="vehicle_active_badge">active</string>
     <string name="welcome_continue_anonymous">Continue without account</string>
     <string name="welcome_register">Create Account</string>
     <string name="welcome_sign_in">Sign In</string>

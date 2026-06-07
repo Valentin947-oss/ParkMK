@@ -29,7 +29,7 @@
             android:textSize="13sp" android:textColor="@color/park_navy" />
         <TextView android:id="@+id/tvActiveBadge"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="активно"
+            android:text="@string/vehicle_active_badge"
             android:textSize="10sp" android:textColor="@color/park_green_dark"
             android:background="@color/park_green_light"
             android:paddingHorizontal="8dp" android:paddingVertical="2dp"
@@ -39,7 +39,7 @@
     <!-- Постави активно -->
     <TextView android:id="@+id/btnSetActive"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Активирај"
+        android:text="@string/vehicle_activate"
         android:textColor="@color/park_red"
         android:textSize="12sp"
         android:padding="4dp"

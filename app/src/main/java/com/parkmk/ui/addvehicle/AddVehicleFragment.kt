@@ -1,5 +1,6 @@
 package com.parkmk.ui.addvehicle
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -23,11 +24,9 @@ class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
         super.onViewCreated(view, savedInstanceState)
         _b = FragmentAddVehicleBinding.bind(view)
 
-        // Debug — провери дали е логиран
         val user = FirebaseAuth.getInstance().currentUser
         android.util.Log.d("AddVehicle", "Current user UID: ${user?.uid}")
 
-        // Live preview на таблица
         b.etPlate.addTextChangedListener(object : android.text.TextWatcher {
             override fun afterTextChanged(s: android.text.Editable?) {
                 val clean = s.toString().uppercase()
@@ -39,12 +38,10 @@ class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        // Зачувај возило
         b.btnSave.setOnClickListener {
             val plate = b.etPlate.text.toString().trim().uppercase()
             val name  = b.etNick.text.toString().trim()
 
-            // Валидација
             if (plate.isEmpty()) {
                 b.tilPlate.error = getString(R.string.error_field_required)
                 return@setOnClickListener
@@ -55,12 +52,10 @@ class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
             }
             b.tilPlate.error = null
 
-            // Зачувај во Firebase
             viewLifecycleOwner.lifecycleScope.launch {
                 b.btnSave.isEnabled = false
                 b.btnSave.text = "Се зачувува..."
                 try {
-                    // Провери дали е логиран
                     val currentUser = FirebaseAuth.getInstance().currentUser
                     if (currentUser == null) {
                         Snackbar.make(b.root, "Не сте логирани!", Snackbar.LENGTH_LONG).show()
@@ -71,36 +66,29 @@ class AddVehicleFragment : Fragment(R.layout.fragment_add_vehicle) {
 
                     val displayName = name.ifEmpty { plate }
                     repo.addVehicle(plate, displayName, "CAR", "#B0B0B0")
-
-                    android.util.Log.d("AddVehicle", "Vehicle saved: $plate for user: ${currentUser.uid}")
+                    AnalyticsHelper.logVehicleAdded("CAR")
 
                     Snackbar.make(b.root, "✓ Возилото $plate е зачувано!", Snackbar.LENGTH_SHORT).show()
 
-                    // Врати се назад
-                    findNavController().navigateUp()
+                    // Оди во MainActivity → Profile
+                    goToMain()
 
                 } catch (e: Exception) {
-                    android.util.Log.e("AddVehicle", "Error saving vehicle: ${e.message}")
-                    Snackbar.make(
-                        b.root,
-                        "Грешка: ${e.message}",
-                        Snackbar.LENGTH_LONG
-                    ).show()
+                    Snackbar.make(b.root, "Грешка: ${e.message}", Snackbar.LENGTH_LONG).show()
                     b.btnSave.isEnabled = true
                     b.btnSave.text = getString(R.string.add_vehicle_save)
                 }
             }
         }
-        AnalyticsHelper.logVehicleAdded("CAR")
-        // Прескокни
-        b.btnSkip?.setOnClickListener {
-            findNavController().navigateUp()
-        }
 
-        // Назад
-        b.btnBack?.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        b.btnSkip?.setOnClickListener { goToMain() }
+        b.btnBack?.setOnClickListener { findNavController().navigateUp() }
+    }
+
+    private fun goToMain() {
+        val intent = Intent(requireContext(), com.parkmk.ui.map.MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
     }
 
     override fun onDestroyView() {

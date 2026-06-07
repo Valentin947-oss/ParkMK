@@ -54,7 +54,7 @@
             <!-- Податоци за корисник -->
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ПОДАТОЦИ ЗА КОРИСНИК"
+                android:text="@string/profile_user_data"
                 android:textColor="@color/park_text_tertiary"
                 android:textSize="11sp"
                 android:letterSpacing="0.08"
@@ -80,7 +80,7 @@
                         <TextView android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Име и презиме"
+                            android:text="@string/profile_name_label"
                             android:textSize="12sp"
                             android:textColor="@color/park_text_secondary" />
                         <TextView android:id="@+id/tvProfileName"
@@ -104,7 +104,7 @@
                         <TextView android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Е-пошта"
+                            android:text="@string/profile_email_label"
                             android:textSize="12sp"
                             android:textColor="@color/park_text_secondary" />
                         <TextView android:id="@+id/tvProfileEmail"
@@ -128,7 +128,7 @@
                         <TextView android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Телефон"
+                            android:text="@string/profile_phone_label"
                             android:textSize="12sp"
                             android:textColor="@color/park_text_secondary" />
                         <TextView android:id="@+id/tvProfilePhone"
@@ -169,7 +169,7 @@
             <!-- Возила -->
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="МОИ ВОЗИЛА"
+                android:text="@string/profile_my_vehicles"
                 android:textColor="@color/park_text_tertiary"
                 android:textSize="11sp"
                 android:letterSpacing="0.08"
@@ -197,7 +197,7 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
-                        android:text="+ Додај ново возило"
+                        android:text="@string/add_vehicle_title"
                         android:textColor="@color/park_red"
                         android:textSize="14sp"
                         app:icon="@drawable/ic_add_circle"
@@ -211,7 +211,7 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="🌐  Јазик / Language"
+                android:text="@string/language_switch"
                 android:textColor="@color/park_navy"
                 android:layout_marginBottom="10dp"
                 app:strokeColor="@color/park_border" />
@@ -221,7 +221,7 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Одјави се"
+                android:text="@string/profile_logout"
                 android:textColor="@color/park_red"
                 app:strokeColor="@color/park_red" />
 

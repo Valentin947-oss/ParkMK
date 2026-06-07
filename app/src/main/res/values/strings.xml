@@ -22,7 +22,7 @@
 
     <string name="register_title">Создај профил</string>
     <string name="register_subtitle">Придружи се на ПаркМК</string>
-    <string name="register_name_hint">Полно име</string>
+    <string name="register_name_hint">Име и Презиме</string>
     <string name="register_email_hint">Е-пошта</string>
     <string name="register_phone_hint">Телефон (+389…)</string>
     <string name="register_password_hint">Лозинка (мин. 8 карактери)</string>
@@ -51,6 +51,15 @@
     <string name="map_subtitle">Битола · наплата по минута</string>
     <string name="map_search_hint">Барај паркинг…</string>
     <string name="map_tap_hint">Тапни на место за детали</string>
+
+    <string name="profile_user_data">ПОДАТОЦИ ЗА КОРИСНИК</string>
+    <string name="profile_name_label">Име и Презиме</string>
+    <string name="profile_email_label">Е-пошта</string>
+    <string name="profile_phone_label">Телефон</string>
+    <string name="profile_my_vehicles">МОИ ВОЗИЛА</string>
+    <string name="language_switch">🌐 Јазик </string>
+    <string name="vehicle_activate">Активирај</string>
+    <string name="vehicle_active_badge">активно</string>
 
     <string name="active_title">Активно паркирање</string>
     <string name="active_live_badge">LIVE</string>

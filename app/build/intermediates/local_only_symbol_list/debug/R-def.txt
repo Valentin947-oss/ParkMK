@@ -201,6 +201,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string history_empty
 string history_title
+string language_switch
 string loading
 string login_button
 string login_email_hint
@@ -220,8 +221,13 @@ string nav_history
 string nav_map
 string nav_profile
 string no_vehicle
+string profile_email_label
 string profile_logout
+string profile_my_vehicles
+string profile_name_label
+string profile_phone_label
 string profile_title
+string profile_user_data
 string project_id
 string register_button
 string register_confirm_password_hint
@@ -236,6 +242,8 @@ string select_vehicle_first
 string sms_active
 string sms_sent_success
 string sms_to_number
+string vehicle_activate
+string vehicle_active_badge
 string welcome_continue_anonymous
 string welcome_register
 string welcome_sign_in

@@ -19,15 +19,35 @@ class AuthActivity : AppCompatActivity() {
         java.util.Locale.setDefault(locale)
         val config = android.content.res.Configuration(newBase.resources.configuration)
         config.setLocale(locale)
-        super.attachBaseContext(newBase.createConfigurationContext(config))
+        config.setLayoutDirection(locale)
+        val context = newBase.createConfigurationContext(config)
+        super.attachBaseContext(context)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Примени јазик
+        val lang = getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        resources.updateConfiguration(config, resources.displayMetrics)
+
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
+    override fun onResume() {
+        super.onResume()
+        val lang = getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        if (resources.configuration.locales[0].language != locale.language) {
+            recreate()
+        }
+    }
     fun goToMain() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()

@@ -55,6 +55,7 @@
     <string name="google_storage_bucket" translatable="false">parkmkd-e82d6.firebasestorage.app</string>
     <string name="history_empty">Сè уште нема паркирања</string>
     <string name="history_title">Историја</string>
+    <string name="language_switch">🌐 Јазик </string>
     <string name="loading">Се вчитува…</string>
     <string name="login_button">Влези</string>
     <string name="login_email_hint">Е-пошта</string>
@@ -74,14 +75,19 @@
     <string name="nav_map">Карта</string>
     <string name="nav_profile">Профил</string>
     <string name="no_vehicle">Немате возило → кликни</string>
+    <string name="profile_email_label">Е-пошта</string>
     <string name="profile_logout">Одјави се</string>
+    <string name="profile_my_vehicles">МОИ ВОЗИЛА</string>
+    <string name="profile_name_label">Име и Презиме</string>
+    <string name="profile_phone_label">Телефон</string>
     <string name="profile_title">Профил</string>
+    <string name="profile_user_data">ПОДАТОЦИ ЗА КОРИСНИК</string>
     <string name="project_id" translatable="false">parkmkd-e82d6</string>
     <string name="register_button">Создај профил</string>
     <string name="register_confirm_password_hint">Потврди лозинка</string>
     <string name="register_email_hint">Е-пошта</string>
     <string name="register_have_account">Веќе имате профил?</string>
-    <string name="register_name_hint">Полно име</string>
+    <string name="register_name_hint">Име и Презиме</string>
     <string name="register_password_hint">Лозинка (мин. 8 карактери)</string>
     <string name="register_phone_hint">Телефон (+389…)</string>
     <string name="register_subtitle">Придружи се на ПаркМК</string>
@@ -90,6 +96,8 @@
     <string name="sms_active">✓ SMS активна · тече наплата</string>
     <string name="sms_sent_success">✓ SMS испратена на 144414</string>
     <string name="sms_to_number">На број: 144414</string>
+    <string name="vehicle_activate">Активирај</string>
+    <string name="vehicle_active_badge">активно</string>
     <string name="welcome_continue_anonymous">Продолжи без профил</string>
     <string name="welcome_register">Регистрирај се</string>
     <string name="welcome_sign_in">Влези</string>

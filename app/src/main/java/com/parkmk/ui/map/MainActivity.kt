@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         java.util.Locale.setDefault(locale)
         val config = android.content.res.Configuration(newBase.resources.configuration)
         config.setLocale(locale)
-        super.attachBaseContext(newBase.createConfigurationContext(config))
+        config.setLayoutDirection(locale)
+        val context = newBase.createConfigurationContext(config)
+        super.attachBaseContext(context)
     }
 
     private fun updateBaseContextLocale(context: Context): Context {
@@ -48,8 +50,26 @@ class MainActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         resources.updateConfiguration(newConfig, resources.displayMetrics)
     }
-
+    override fun onResume() {
+        super.onResume()
+        val lang = getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        if (resources.configuration.locales[0].language != locale.language) {
+            recreate()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Примени јазик
+        val lang = getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("language", "mk") ?: "mk"
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        resources.updateConfiguration(config, resources.displayMetrics)
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)

@@ -55,6 +55,15 @@
     <string name="map_search_hint">Search parking…</string>
     <string name="map_tap_hint">Tap a pin for details</string>
 
+    <string name="profile_user_data">USER DATA</string>
+    <string name="profile_name_label">Full name</string>
+    <string name="profile_email_label">Email</string>
+    <string name="profile_phone_label">Phone</string>
+    <string name="profile_my_vehicles">MY VEHICLES</string>
+    <string name="language_switch">🌐 Language</string>
+    <string name="vehicle_activate">Activate</string>
+    <string name="vehicle_active_badge">active</string>
+
     <string name="active_title">Active Parking</string>
     <string name="active_live_badge">LIVE</string>
     <string name="active_parked_label">PARKED</string>
