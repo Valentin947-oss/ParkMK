@@ -91,7 +91,25 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         b.btnAnonymous.setOnClickListener {
             vm.signInAnonymously()
         }
+        b.btnLanguageWelcome.setOnClickListener {
+            val prefs = requireContext().getSharedPreferences("settings", android.content.Context.MODE_PRIVATE)
+            val currentLang = prefs.getString("language", "mk") ?: "mk"
+            val options = arrayOf("🇲🇰  Македонски", "🇬🇧  English")
+            val selected = if (currentLang == "mk") 0 else 1
 
+            com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Јазик / Language")
+                .setSingleChoiceItems(options, selected) { dialog, index ->
+                    val lang = if (index == 0) "mk" else "en"
+                    prefs.edit().putString("language", lang).apply()
+                    dialog.dismiss()
+                    androidx.appcompat.app.AppCompatDelegate.setApplicationLocales(
+                        androidx.core.os.LocaleListCompat.forLanguageTags(lang)
+                    )
+                }
+                .setNegativeButton("Откажи", null)
+                .show()
+        }
         // Observe
         viewLifecycleOwner.lifecycleScope.launch {
             vm.state.collect { state ->

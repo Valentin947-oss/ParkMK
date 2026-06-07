@@ -68,16 +68,16 @@
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "com.parkmk.app-merged_res-67:/layout_fragment_welcome.xml.flat",
+        "source": "com.parkmk.app-main-69:/layout/fragment_welcome.xml"
+    },
+    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_google.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_google.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\drawable_ic_stop.xml.flat",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\drawable\\ic_stop.xml"
-    },
-    {
-        "merged": "com.parkmk.app-merged_res-67:/layout_fragment_receipt.xml.flat",
-        "source": "com.parkmk.app-main-69:/layout/fragment_receipt.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-merged_res-67:\\mipmap-xxhdpi_ic_launcher.png.flat",

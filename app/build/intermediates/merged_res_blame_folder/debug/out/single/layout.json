@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.parkmk.app-mergeDebugResources-66:/layout/fragment_receipt.xml",
-        "source": "com.parkmk.app-main-69:/layout/fragment_receipt.xml"
-    },
-    {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\fragment_receipt.xml",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_receipt.xml"
     },
@@ -50,6 +46,10 @@
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\fragment_register.xml",
         "source": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-main-69:\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "com.parkmk.app-mergeDebugResources-66:/layout/fragment_welcome.xml",
+        "source": "com.parkmk.app-main-69:/layout/fragment_welcome.xml"
     },
     {
         "merged": "C:\\Users\\Home\\.gradle\\daemon\\8.4\\com.parkmk.app-mergeDebugResources-66:\\layout\\fragment_forgot_password.xml",

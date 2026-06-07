@@ -30,6 +30,9 @@ public final class FragmentWelcomeBinding implements ViewBinding {
   public final MaterialButton btnGoogle;
 
   @NonNull
+  public final MaterialButton btnLanguageWelcome;
+
+  @NonNull
   public final MaterialButton btnLogin;
 
   @NonNull
@@ -37,11 +40,13 @@ public final class FragmentWelcomeBinding implements ViewBinding {
 
   private FragmentWelcomeBinding(@NonNull ScrollView rootView, @NonNull TextView btnAnonymous,
       @NonNull MaterialButton btnFacebook, @NonNull MaterialButton btnGoogle,
-      @NonNull MaterialButton btnLogin, @NonNull MaterialButton btnRegister) {
+      @NonNull MaterialButton btnLanguageWelcome, @NonNull MaterialButton btnLogin,
+      @NonNull MaterialButton btnRegister) {
     this.rootView = rootView;
     this.btnAnonymous = btnAnonymous;
     this.btnFacebook = btnFacebook;
     this.btnGoogle = btnGoogle;
+    this.btnLanguageWelcome = btnLanguageWelcome;
     this.btnLogin = btnLogin;
     this.btnRegister = btnRegister;
   }
@@ -91,6 +96,12 @@ public final class FragmentWelcomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnLanguageWelcome;
+      MaterialButton btnLanguageWelcome = ViewBindings.findChildViewById(rootView, id);
+      if (btnLanguageWelcome == null) {
+        break missingId;
+      }
+
       id = R.id.btnLogin;
       MaterialButton btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
@@ -104,7 +115,7 @@ public final class FragmentWelcomeBinding implements ViewBinding {
       }
 
       return new FragmentWelcomeBinding((ScrollView) rootView, btnAnonymous, btnFacebook, btnGoogle,
-          btnLogin, btnRegister);
+          btnLanguageWelcome, btnLogin, btnRegister);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

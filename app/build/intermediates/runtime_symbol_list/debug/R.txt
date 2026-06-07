@@ -3451,6 +3451,7 @@ int id btnDelete 0x7f08007f
 int id btnFacebook 0x7f080080
 int id btnGoogle 0x7f080081
 int id btnLanguage 0x7f080082
+int id btnLanguageWelcome 0x7f08028f
 int id btnLogin 0x7f080083
 int id btnLogout 0x7f080084
 int id btnParkHere 0x7f080085

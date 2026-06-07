@@ -62,6 +62,7 @@ id btnDelete
 id btnFacebook
 id btnGoogle
 id btnLanguage
+id btnLanguageWelcome
 id btnLogin
 id btnLogout
 id btnParkHere
