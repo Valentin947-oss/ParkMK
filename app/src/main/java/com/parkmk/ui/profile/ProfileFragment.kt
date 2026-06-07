@@ -2,10 +2,8 @@ package com.parkmk.ui.profile
 
 import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
-import com.parkmk.ui.map.MainActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,8 +16,6 @@ import com.parkmk.data.repository.FirebaseRepository
 import com.parkmk.databinding.FragmentProfileBinding
 import com.parkmk.model.Vehicle
 import com.parkmk.ui.auth.AuthActivity
-import com.parkmk.util.AnalyticsHelper
-import java.util.Locale
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
@@ -67,6 +63,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         }
 
         b.btnLanguage.setOnClickListener {
+            android.util.Log.d("LANG", "Button clicked!")
             showLanguagePicker()
         }
 
@@ -79,42 +76,24 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private fun showLanguagePicker() {
         val prefs = requireContext().getSharedPreferences("settings", Context.MODE_PRIVATE)
-        val currentLang = prefs.getString("language", "mk") ?: "mk"
         val options = arrayOf("🇲🇰  Македонски (MKD)", "🇬🇧  English (ENG)")
-        val selected = if (currentLang == "mk") 0 else 1
 
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Јазик / Language")
-            .setSingleChoiceItems(options, selected) { dialog, index ->
+            .setItems(options) { dialog, index ->
+                android.util.Log.d("LANG", "Index selected: $index")
                 val lang = if (index == 0) "mk" else "en"
+                android.util.Log.d("LANG", "Lang to save: $lang")
                 prefs.edit().putString("language", lang).apply()
-                android.util.Log.d("LANG", "Saved language: $lang")
-                android.util.Log.d("LANG", "Read back: ${prefs.getString("language", "mk")}")
+                android.util.Log.d("LANG", "Saved: ${prefs.getString("language", "none")}")
                 dialog.dismiss()
 
-                // Целосен restart на процесот
                 val intent = Intent(requireContext(), com.parkmk.ui.auth.SplashActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 requireContext().startActivity(intent)
-                android.os.Process.killProcess(android.os.Process.myPid())
+                requireActivity().finishAffinity()
             }
-            .setNegativeButton("Откажи", null)
             .show()
-    }
-
-    private fun updateTexts(lang: String) {
-        // Рачно ажурирај ги текстовите во ProfileFragment
-        if (lang == "en") {
-            b.btnLogout.text = "Sign Out"
-            b.btnAddVehicle.text = "Add Vehicle"
-            b.btnLanguage.text = "Language"
-            // додај ги сите текстови што ги имаш
-        } else {
-            b.btnLogout.text = "Одјави се"
-            b.btnAddVehicle.text = "Додај возило"
-            b.btnLanguage.text = "Јазик / Language"
-        }
     }
 
     private fun loadVehicles() {

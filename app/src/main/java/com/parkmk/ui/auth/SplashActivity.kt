@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
     override fun attachBaseContext(newBase: Context) {
         val lang = newBase.getSharedPreferences("settings", Context.MODE_PRIVATE)
             .getString("language", "mk") ?: "mk"
+        android.util.Log.d("LANG", "attachBaseContext reading: $lang")
         val locale = java.util.Locale(lang)
         java.util.Locale.setDefault(locale)
         val config = android.content.res.Configuration(newBase.resources.configuration)
