@@ -63,6 +63,9 @@
     <string name="profile_phone_label">Phone</string>
     <string name="profile_title">Profile</string>
     <string name="profile_user_data">USER DATA</string>
+    <string name="receipt_go_history">Go to History</string>
+    <string name="receipt_subtitle">Billing has stopped</string>
+    <string name="receipt_title">Parking ended</string>
     <string name="register_button">Create Account</string>
     <string name="register_confirm_password_hint">Confirm password</string>
     <string name="register_email_hint">Email</string>
@@ -76,6 +79,11 @@
     <string name="sms_active">✓ SMS active · billing running</string>
     <string name="sms_sent_success">✓ SMS sent to 144414</string>
     <string name="sms_to_number">To number: 144414</string>
+    <string name="spot_hours_label">Hours</string>
+    <string name="spot_park_here">Park here →</string>
+    <string name="spot_price_per_hour_label">Price/hr</string>
+    <string name="spot_price_per_min_label">Price/min</string>
+    <string name="spot_sms_label">SMS activation to: </string>
     <string name="time_min">min</string>
     <string name="time_sec">sec</string>
     <string name="vehicle_activate">Activate</string>

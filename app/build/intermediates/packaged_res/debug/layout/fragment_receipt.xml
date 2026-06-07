@@ -16,13 +16,13 @@
         android:layout_marginBottom="16dp" />
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Паркирањето завршено"
+        android:text="@string/receipt_title"
         android:textSize="20sp" android:textStyle="bold"
         android:textColor="@color/park_navy"
         android:layout_marginBottom="6dp" />
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Наплатата е прекината"
+        android:text="@string/receipt_subtitle"
         android:textSize="13sp" android:textColor="@color/park_text_secondary"
         android:layout_marginBottom="28dp" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/btnBackToMap"
         android:layout_width="match_parent" android:layout_height="52dp"
         android:backgroundTint="@color/park_red"
-        android:text="Оди во Историја на паркирање"
+        android:text="@string/receipt_go_history"
         android:textColor="@color/white" />
 
 </LinearLayout>

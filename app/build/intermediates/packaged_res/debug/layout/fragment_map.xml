@@ -28,7 +28,7 @@
         <TextView android:id="@+id/layoutEmpty"
             android:layout_width="match_parent" android:layout_height="56dp"
             android:gravity="center"
-            android:text="Тапни на паркинг место за детали"
+            android:text="@string/map_tap_hint"
             android:textColor="@color/park_text_secondary"
             android:textSize="13sp" />
 
@@ -74,7 +74,7 @@
                     android:layout_weight="1" android:orientation="vertical"
                     android:gravity="center">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Цена/час"
+                        android:text="@string/spot_price_per_hour_label"
                         android:textSize="11sp" android:textColor="@color/park_text_secondary" />
                     <TextView android:id="@+id/tvPrice"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                     android:layout_weight="1" android:orientation="vertical"
                     android:gravity="center">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Цена/мин"
+                        android:text="@string/spot_price_per_min_label"
                         android:textSize="11sp" android:textColor="@color/park_text_secondary" />
                     <TextView android:id="@+id/tvPerMin"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                     android:layout_weight="1" android:orientation="vertical"
                     android:gravity="center">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Работно"
+                        android:text="@string/spot_hours_label"
                         android:textSize="11sp" android:textColor="@color/park_text_secondary" />
                     <TextView android:id="@+id/tvHours"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginBottom="12dp">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="SMS активирање на број: "
+                    android:text="@string/spot_sms_label"
                     android:textSize="12sp" android:textColor="@color/park_text_secondary" />
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="144414"
@@ -128,7 +128,7 @@
                 android:id="@+id/btnParkHere"
                 android:layout_width="match_parent" android:layout_height="50dp"
                 android:backgroundTint="@color/park_red"
-                android:text="Паркирај тука →"
+                android:text="@string/spot_park_here"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 

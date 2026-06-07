@@ -90,6 +90,16 @@
     <string name="time_sec">sec</string>
     <string name="label_vehicle">Vehicle</string>
 
+    <string name="spot_price_per_hour_label">Price/hr</string>
+    <string name="spot_price_per_min_label">Price/min</string>
+    <string name="spot_hours_label">Hours</string>
+    <string name="spot_sms_label">SMS activation to: </string>
+    <string name="spot_park_here">Park here →</string>
+
+    <string name="receipt_title">Parking ended</string>
+    <string name="receipt_subtitle">Billing has stopped</string>
+    <string name="receipt_go_history">Go to History</string>
+
     <string name="add_vehicle_title">Add Vehicle</string>
     <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
     <string name="add_vehicle_save">Save Vehicle</string>

@@ -84,6 +84,16 @@
     <string name="time_sec">сек</string>
     <string name="label_vehicle">Возило</string>
 
+    <string name="spot_price_per_hour_label">Цена/час</string>
+    <string name="spot_price_per_min_label">Цена/мин</string>
+    <string name="spot_hours_label">Работно</string>
+    <string name="spot_sms_label">SMS активирање на број: </string>
+    <string name="spot_park_here">Паркирај тука →</string>
+
+    <string name="receipt_title">Паркирањето завршено</string>
+    <string name="receipt_subtitle">Наплатата е прекината</string>
+    <string name="receipt_go_history">Оди во Историја</string>
+
     <string name="add_vehicle_title">Додај возило</string>
     <string name="add_vehicle_plate_hint">Таблица (пр. ВТ-1234-АА)</string>
     <string name="add_vehicle_save">Зачувај возило</string>

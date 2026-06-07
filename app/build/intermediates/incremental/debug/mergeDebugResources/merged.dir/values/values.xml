@@ -2342,6 +2342,9 @@
     <string name="profile_user_data">ПОДАТОЦИ ЗА КОРИСНИК</string>
     <string name="project_id" translatable="false">parkmkd-e82d6</string>
     <string name="public_transport">Public transport</string>
+    <string name="receipt_go_history">Оди во Историја</string>
+    <string name="receipt_subtitle">Наплатата е прекината</string>
+    <string name="receipt_title">Паркирањето завршено</string>
     <string name="register_button">Создај профил</string>
     <string name="register_confirm_password_hint">Потврди лозинка</string>
     <string name="register_email_hint">Е-пошта</string>
@@ -2370,6 +2373,11 @@
     <string name="sms_sent_success">✓ SMS испратена на 144414</string>
     <string name="sms_to_number">На број: 144414</string>
     <string name="snapshot">Snapshot</string>
+    <string name="spot_hours_label">Работно</string>
+    <string name="spot_park_here">Паркирај тука →</string>
+    <string name="spot_price_per_hour_label">Цена/час</string>
+    <string name="spot_price_per_min_label">Цена/мин</string>
+    <string name="spot_sms_label">SMS активирање на број: </string>
     <string name="states">States</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="time_min">мин</string>
