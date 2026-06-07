@@ -196,7 +196,11 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
     private fun stopParking() {
         handler.removeCallbacks(ticker)
         ParkingNotificationManager.cancelAll()
-
+        val smsUri = Uri.parse("smsto:144414")
+        val smsIntent = Intent(Intent.ACTION_SENDTO, smsUri).apply {
+            putExtra("sms_body", "S")
+        }
+        try { startActivity(smsIntent) } catch (_: Exception) { }
         val uid = FirebaseAuth.getInstance().currentUser?.uid
         if (uid != null && smsSent) {
             val elapsed = (System.currentTimeMillis() - startMs) / 1000L
