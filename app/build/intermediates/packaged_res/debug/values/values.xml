@@ -22,7 +22,8 @@
     <string name="active_parked_label">ПАРКИРАНО</string>
     <string name="active_send_sms">Испрати SMS и активирај</string>
     <string name="active_stop">СТОП — Прекини наплата</string>
-    <string name="active_title">Активен паркинг</string>
+    <string name="active_timer_hint">Притисни испрати SMS за да почне наплатата</string>
+    <string name="active_title">Активно паркирање</string>
     <string name="add_vehicle_plate_hint">Таблица (пр. ВТ-1234-АА)</string>
     <string name="add_vehicle_save">Зачувај возило</string>
     <string name="add_vehicle_skip">Прескокни засега</string>
@@ -32,11 +33,15 @@
     <string name="btn_cancel">Откажи</string>
     <string name="btn_confirm">Потврди</string>
     <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
+    <string name="den_per_min_unit"/>
     <string name="error_field_required">Ова поле е задолжително</string>
     <string name="error_generic">Нешто тргна наопаку</string>
     <string name="error_invalid_email">Внеси валидна е-пошта</string>
     <string name="error_password_too_short">Мин. 8 карактери</string>
     <string name="error_passwords_dont_match">Лозинките не се совпаѓаат</string>
+    <string name="facebook_app_id" translatable="false">YOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token" translatable="false">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fbYOUR_FACEBOOK_APP_ID</string>
     <string name="forgot_back_to_login">Назад на логин</string>
     <string name="forgot_email_hint">Е-пошта</string>
     <string name="forgot_email_sent">Линкот е испратен на %s</string>
@@ -68,6 +73,7 @@
     <string name="nav_history">Историја</string>
     <string name="nav_map">Карта</string>
     <string name="nav_profile">Профил</string>
+    <string name="no_vehicle">Немате возило → кликни</string>
     <string name="profile_logout">Одјави се</string>
     <string name="profile_title">Профил</string>
     <string name="project_id" translatable="false">parkmkd-e82d6</string>
@@ -75,11 +81,15 @@
     <string name="register_confirm_password_hint">Потврди лозинка</string>
     <string name="register_email_hint">Е-пошта</string>
     <string name="register_have_account">Веќе имате профил?</string>
-    <string name="register_name_hint">Полно ime</string>
+    <string name="register_name_hint">Полно име</string>
     <string name="register_password_hint">Лозинка (мин. 8 карактери)</string>
     <string name="register_phone_hint">Телефон (+389…)</string>
     <string name="register_subtitle">Придружи се на ПаркМК</string>
     <string name="register_title">Создај профил</string>
+    <string name="select_vehicle_first">⚠ Прво избери возило!</string>
+    <string name="sms_active">✓ SMS активна · тече наплата</string>
+    <string name="sms_sent_success">✓ SMS испратена на 144414</string>
+    <string name="sms_to_number">На број: 144414</string>
     <string name="welcome_continue_anonymous">Продолжи без профил</string>
     <string name="welcome_register">Регистрирај се</string>
     <string name="welcome_sign_in">Влези</string>

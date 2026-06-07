@@ -4243,6 +4243,7 @@ string active_live_badge
 string active_parked_label
 string active_send_sms
 string active_stop
+string active_timer_hint
 string active_title
 string add_vehicle_plate_hint
 string add_vehicle_save
@@ -4329,6 +4330,7 @@ string compass
 string copy_toast_msg
 string cyclemap
 string default_web_client_id
+string den_per_min_unit
 string dest_title
 string error_a11y_label
 string error_field_required
@@ -4340,9 +4342,12 @@ string error_passwords_dont_match
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string facebook_app_id
+string facebook_client_token
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string fb_login_protocol_scheme
 string fcm_fallback_notification_channel_label
 string fiets_nl
 string first_fix_message
@@ -4500,6 +4505,7 @@ string nav_app_bar_open_drawer_description
 string nav_history
 string nav_map
 string nav_profile
+string no_vehicle
 string offline
 string password_toggle_content_description
 string path_password_eye
@@ -4525,12 +4531,16 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string select_vehicle_first
 string set_mode_hide_me
 string set_mode_offline
 string set_mode_online
 string set_mode_show_me
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string sms_active
+string sms_sent_success
+string sms_to_number
 string snapshot
 string states
 string status_bar_notification_info_overflow

@@ -168,6 +168,7 @@ string active_live_badge
 string active_parked_label
 string active_send_sms
 string active_stop
+string active_timer_hint
 string active_title
 string add_vehicle_plate_hint
 string add_vehicle_save
@@ -178,11 +179,15 @@ string app_tagline
 string btn_cancel
 string btn_confirm
 string default_web_client_id
+string den_per_min_unit
 string error_field_required
 string error_generic
 string error_invalid_email
 string error_password_too_short
 string error_passwords_dont_match
+string facebook_app_id
+string facebook_client_token
+string fb_login_protocol_scheme
 string forgot_back_to_login
 string forgot_email_hint
 string forgot_email_sent
@@ -214,6 +219,7 @@ string map_title
 string nav_history
 string nav_map
 string nav_profile
+string no_vehicle
 string profile_logout
 string profile_title
 string project_id
@@ -226,6 +232,10 @@ string register_password_hint
 string register_phone_hint
 string register_subtitle
 string register_title
+string select_vehicle_first
+string sms_active
+string sms_sent_success
+string sms_to_number
 string welcome_continue_anonymous
 string welcome_register
 string welcome_sign_in

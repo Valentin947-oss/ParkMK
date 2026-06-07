@@ -88,12 +88,14 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             .setSingleChoiceItems(options, selected) { dialog, index ->
                 val lang = if (index == 0) "mk" else "en"
                 prefs.edit().putString("language", lang).apply()
+                android.util.Log.d("LANG", "Saved language: $lang")
+                android.util.Log.d("LANG", "Read back: ${prefs.getString("language", "mk")}")
                 dialog.dismiss()
-                AnalyticsHelper.logLanguageChanged(lang)
 
-                // Директно рестартирај го процесот
+                // Целосен restart на процесот
                 val intent = Intent(requireContext(), com.parkmk.ui.auth.SplashActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 requireContext().startActivity(intent)
                 android.os.Process.killProcess(android.os.Process.myPid())
             }

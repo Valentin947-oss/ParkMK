@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ParkMK - EN</string>
-    <string name="app_tagline">Bitola parking</string>
+    <string name="app_name">ParkMK</string>
+    <string name="app_tagline">Bitola parking · per minute</string>
+
+    <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">YOUR_FACEBOOK_APP_ID</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fbYOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token" translatable="false">YOUR_FACEBOOK_CLIENT_TOKEN</string>
 
     <string name="welcome_sign_in">Sign In</string>
     <string name="welcome_register">Create Account</string>
@@ -18,14 +23,9 @@
     <string name="login_with_facebook">Continue with Facebook</string>
     <string name="login_or_divider">or</string>
 
-    <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
-    <string name="facebook_app_id" translatable="false">YOUR_FACEBOOK_APP_ID</string>
-    <string name="fb_login_protocol_scheme" translatable="false">fbYOUR_FACEBOOK_APP_ID</string>
-    <string name="facebook_client_token" translatable="false">YOUR_FACEBOOK_CLIENT_TOKEN</string>
-
     <string name="register_title">Create Account</string>
     <string name="register_subtitle">Join ParkMK</string>
-    <string name="register_name_hint">Full Name (latin)</string>
+    <string name="register_name_hint">Full Name</string>
     <string name="register_email_hint">Email</string>
     <string name="register_phone_hint">Phone (+389…)</string>
     <string name="register_password_hint">Password (min. 8 characters)</string>
@@ -56,10 +56,16 @@
     <string name="map_tap_hint">Tap a pin for details</string>
 
     <string name="active_title">Active Parking</string>
-    <string name="active_parked_label">PARKED Time</string>
-    <string name="active_send_sms">Send SMS and activate</string>
-    <string name="active_stop">STOP — End billing</string>
     <string name="active_live_badge">LIVE</string>
+    <string name="active_parked_label">PARKED</string>
+    <string name="active_send_sms">Send SMS and Activate</string>
+    <string name="active_stop">STOP — End billing</string>
+    <string name="active_timer_hint">Press Send SMS to start billing</string>
+    <string name="sms_to_number">To number: 144414</string>
+    <string name="no_vehicle">No vehicle → tap to select</string>
+    <string name="select_vehicle_first">⚠ Select a vehicle first!</string>
+    <string name="sms_active">✓ SMS active · billing running</string>
+    <string name="sms_sent_success">✓ SMS sent to 144414</string>
 
     <string name="profile_title">Profile</string>
     <string name="profile_logout">Sign Out</string>
@@ -69,8 +75,8 @@
 
     <string name="add_vehicle_title">Add Vehicle</string>
     <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
-    <string name="add_vehicle_save">Save vehicle</string>
-    <string name="add_vehicle_skip">Continue</string>
+    <string name="add_vehicle_save">Save Vehicle</string>
+    <string name="add_vehicle_skip">Skip for now</string>
 
     <string name="btn_confirm">Confirm</string>
     <string name="btn_cancel">Cancel</string>

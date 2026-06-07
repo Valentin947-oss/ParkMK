@@ -80,7 +80,7 @@
                         <TextView android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Ime и презиме"
+                            android:text="Име и презиме"
                             android:textSize="12sp"
                             android:textColor="@color/park_text_secondary" />
                         <TextView android:id="@+id/tvProfileName"

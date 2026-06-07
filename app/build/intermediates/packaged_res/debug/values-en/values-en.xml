@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="active_live_badge">LIVE</string>
-    <string name="active_parked_label">PARKED Time</string>
-    <string name="active_send_sms">Send SMS and activate</string>
+    <string name="active_parked_label">PARKED</string>
+    <string name="active_send_sms">Send SMS and Activate</string>
     <string name="active_stop">STOP — End billing</string>
+    <string name="active_timer_hint">Press Send SMS to start billing</string>
     <string name="active_title">Active Parking</string>
     <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
-    <string name="add_vehicle_save">Save vehicle</string>
-    <string name="add_vehicle_skip">Continue</string>
+    <string name="add_vehicle_save">Save Vehicle</string>
+    <string name="add_vehicle_skip">Skip for now</string>
     <string name="add_vehicle_title">Add Vehicle</string>
-    <string name="app_name">ParkMK - EN</string>
-    <string name="app_tagline">Bitola parking</string>
+    <string name="app_name">ParkMK</string>
+    <string name="app_tagline">Bitola parking · per minute</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_confirm">Confirm</string>
     <string name="default_web_client_id" translatable="false">493723588112-6gg2n8v08rohjh0to7mpslshgj8n7sc1.apps.googleusercontent.com</string>
@@ -48,17 +49,22 @@
     <string name="nav_history">History</string>
     <string name="nav_map">Map</string>
     <string name="nav_profile">Profile</string>
+    <string name="no_vehicle">No vehicle → tap to select</string>
     <string name="profile_logout">Sign Out</string>
     <string name="profile_title">Profile</string>
     <string name="register_button">Create Account</string>
     <string name="register_confirm_password_hint">Confirm password</string>
     <string name="register_email_hint">Email</string>
     <string name="register_have_account">Already have an account?</string>
-    <string name="register_name_hint">Full Name (latin)</string>
+    <string name="register_name_hint">Full Name</string>
     <string name="register_password_hint">Password (min. 8 characters)</string>
     <string name="register_phone_hint">Phone (+389…)</string>
     <string name="register_subtitle">Join ParkMK</string>
     <string name="register_title">Create Account</string>
+    <string name="select_vehicle_first">⚠ Select a vehicle first!</string>
+    <string name="sms_active">✓ SMS active · billing running</string>
+    <string name="sms_sent_success">✓ SMS sent to 144414</string>
+    <string name="sms_to_number">To number: 144414</string>
     <string name="welcome_continue_anonymous">Continue without account</string>
     <string name="welcome_register">Create Account</string>
     <string name="welcome_sign_in">Sign In</string>

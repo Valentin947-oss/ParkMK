@@ -56,7 +56,7 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
             b.tvTimer.text = String.format("%02d:%02d:%02d", h, m, s)
             val cost = elapsed / 60.0 * spot.pricePerMinute
             b.tvCost.text = String.format("%.2f ден", cost)
-            if (smsSent) b.tvTimerStatus.text = "✓ SMS активна · тече наплата"
+            if (smsSent) b.tvTimerStatus.text = requireContext().getString(R.string.sms_active)
             handler.postDelayed(this, 1000L)
         }
     }
@@ -71,15 +71,14 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
 
         b.tvSpotName.text    = spot.name
         b.tvZoneVal.text     = spot.zoneName
-        b.tvRateVal.text     = "%.2f ден/мин".format(spot.pricePerMinute)
+        b.tvRateVal.text = String.format("%.2f %s", spot.pricePerMinute, getString(R.string.den_per_min_unit))
         b.tvStartVal.text    = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
-        b.tvSmsTo.text       = "На број: 144414"
-        b.tvVehicleVal.text  = "Се вчитува..."
+        b.tvSmsTo.text       = getString(R.string.sms_to_number)
+        b.tvVehicleVal.text  = getString(R.string.loading)
         b.tvTimer.text       = "00:00:00"
         b.tvCost.text        = "0.00 ден"
-        b.tvTimerStatus.text = "Притисни 'Send SMS' за да почне наплатата"
+        b.tvTimerStatus.text = getString(R.string.active_timer_hint)
 
-        // Барај дозвола за нотификации на Android 13+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(
                     requireContext(), Manifest.permission.POST_NOTIFICATIONS
@@ -118,11 +117,11 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                     val active = vehicles.find { it.isActive } ?: vehicles.first()
                     setVehicle(active)
                 } else {
-                    b.tvVehicleVal.text = "Немате возило → кликни"
+                    b.tvVehicleVal.text = getString(R.string.no_vehicle)
                 }
             }
             .addOnFailureListener {
-                b.tvVehicleVal.text = "Грешка при вчитување"
+                b.tvVehicleVal.text = getString(R.string.error_generic)
             }
     }
 
@@ -163,7 +162,7 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
     private fun sendSms() {
         val plateSms = activeVehicle?.plateSms ?: ""
         if (plateSms.isEmpty()) {
-            b.tvTimerStatus.text = "⚠ Прво избери возило!"
+            b.tvTimerStatus.text = getString(R.string.select_vehicle_first)
             return
         }
         val zoneCode = spot.zoneId.replace("zone_", "").uppercase()
@@ -188,7 +187,7 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 activeVehicle?.plate ?: ""
             )
             AnalyticsHelper.logParkingStarted(spot.name, spot.zoneName, spot.pricePerHour)
-            b.btnSendSms.text = "✓ SMS испратена на 144414 ✓"
+            b.btnSendSms.text = getString(R.string.sms_sent_success)
             b.btnSendSms.setBackgroundColor(requireContext().getColor(R.color.park_green))
             b.btnSendSms.isEnabled = false
         } catch (_: Exception) { }
@@ -210,13 +209,19 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                 "startTime"   to Timestamp(startMs / 1000, 0),
                 "endTime"     to FieldValue.serverTimestamp(),
                 "durationSec" to elapsed,
-                "totalCost" to Math.round(cost * 100.0) / 100.0,
+                "totalCost"   to Math.round(cost * 100.0) / 100.0,
                 "smsNumber"   to "144414"
             )
             Firebase.firestore
                 .collection("users").document(uid)
                 .collection("sessions").add(session)
         }
+
+        AnalyticsHelper.logParkingStopped(
+            spot.name,
+            (System.currentTimeMillis() - startMs) / 1000L,
+            ((System.currentTimeMillis() - startMs) / 1000L) / 60.0 * spot.pricePerMinute
+        )
 
         findNavController().navigate(R.id.action_active_to_receipt)
     }
