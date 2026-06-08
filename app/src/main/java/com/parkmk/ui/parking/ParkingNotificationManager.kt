@@ -23,12 +23,12 @@ object ParkingNotificationManager {
         notif1Runnable = Runnable {
             showNotification(
                 context, notifManager,
-                id    = 1001,
+                id    = 2001,
                 title = "⚠️ Паркирањето истекува!",
                 body  = "Тест нотификација за $spotName"
             )
         }
-        handler.postDelayed(notif1Runnable!!, 10_000L) // 10 секунди
+        handler.postDelayed(notif1Runnable!!, 10_000L)
     }
 
     // Вистински — 1 час и 10 мин пред истек
@@ -40,7 +40,7 @@ object ParkingNotificationManager {
         if (oneHourBefore > 0) {
             notif1Runnable = Runnable {
                 showNotification(
-                    context, notifManager, 1001,
+                    context, notifManager, 2001,
                     "⏰ Паркирањето истекува за 1 час",
                     "Паркирањето на $spotName истекува за 1 час"
                 )
@@ -52,7 +52,7 @@ object ParkingNotificationManager {
         if (tenMinBefore > 0) {
             notif2Runnable = Runnable {
                 showNotification(
-                    context, notifManager, 1002,
+                    context, notifManager, 2002,
                     "⚠️ Паркирањето истекува за 10 минути!",
                     "Паркирањето на $spotName истекува наскоро!"
                 )
@@ -80,6 +80,7 @@ object ParkingNotificationManager {
             .setContentTitle(title)
             .setContentText(body)
             .setAutoCancel(true)
+            .setSilent(false)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pending)
             .build()

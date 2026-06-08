@@ -46,6 +46,7 @@
     <string name="nav_map">Карта</string>
     <string name="nav_history">Историја</string>
     <string name="nav_profile">Профил</string>
+    <string name="nav_active">Сесија</string>
 
     <string name="map_title">Паркинг зони</string>
     <string name="map_subtitle">Битола · наплата по минута</string>

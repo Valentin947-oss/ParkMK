@@ -8,15 +8,23 @@
         android:name="com.parkmk.ui.map.MapFragment"
         android:label="Map">
         <action android:id="@+id/action_map_to_activePark"
-            app:destination="@id/activeParkingFragment" />
+            app:destination="@id/activeParkingFragment"
+            app:popUpTo="@id/mapFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 
     <fragment android:id="@+id/activeParkingFragment"
         android:name="com.parkmk.ui.parking.ActiveParkingFragment"
         android:label="Active Parking">
+        <!-- Од мапа со spotId -->
+        <argument
+            android:name="spotId"
+            app:argType="string"
+            android:defaultValue="s1" />
         <action android:id="@+id/action_active_to_receipt"
             app:destination="@id/receiptFragment"
-            app:popUpTo="@id/mapFragment" />
+            app:popUpTo="@id/mapFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 
     <fragment android:id="@+id/receiptFragment"

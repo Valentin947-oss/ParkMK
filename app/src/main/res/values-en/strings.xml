@@ -49,6 +49,7 @@
     <string name="nav_map">Map</string>
     <string name="nav_history">History</string>
     <string name="nav_profile">Profile</string>
+    <string name="nav_active">Session</string>
 
     <string name="map_title">Parking Zones</string>
     <string name="map_subtitle">Bitola · per-minute billing</string>

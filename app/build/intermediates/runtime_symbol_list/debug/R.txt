@@ -3221,11 +3221,13 @@ int drawable ic_mtrl_chip_checked_circle 0x7f0700d3
 int drawable ic_mtrl_chip_close_circle 0x7f0700d4
 int drawable ic_notification 0x7f0700d5
 int drawable ic_parking 0x7f0700d6
+int drawable ic_parking_pin 0x7f07013a
 int drawable ic_person 0x7f0700d7
 int drawable ic_phone 0x7f0700d8
 int drawable ic_search 0x7f0700d9
 int drawable ic_search_black_24 0x7f0700da
 int drawable ic_send 0x7f0700db
+int drawable ic_session 0x7f07013b
 int drawable ic_stop 0x7f0700dc
 int drawable m3_avd_hide_password 0x7f0700dd
 int drawable m3_avd_show_password 0x7f0700de
@@ -4508,6 +4510,7 @@ int string mtrl_switch_track_path 0x7f120125
 int string mtrl_timepicker_cancel 0x7f120126
 int string mtrl_timepicker_confirm 0x7f120127
 int string my_location 0x7f120128
+int string nav_active 0x7f12016b
 int string nav_app_bar_navigate_up_description 0x7f120129
 int string nav_app_bar_open_drawer_description 0x7f12012a
 int string nav_history 0x7f12012b

@@ -77,6 +77,7 @@
     <string name="map_subtitle">Битола · наплата по минута</string>
     <string name="map_tap_hint">Тапни на место за детали</string>
     <string name="map_title">Паркинг зони</string>
+    <string name="nav_active">Сесија</string>
     <string name="nav_history">Историја</string>
     <string name="nav_map">Карта</string>
     <string name="nav_profile">Профил</string>

@@ -35,10 +35,12 @@ drawable ic_logout
 drawable ic_map
 drawable ic_notification
 drawable ic_parking
+drawable ic_parking_pin
 drawable ic_person
 drawable ic_phone
 drawable ic_search
 drawable ic_send
+drawable ic_session
 drawable ic_stop
 id action_active_to_receipt
 id action_login_to_forgot
@@ -225,6 +227,7 @@ string map_search_hint
 string map_subtitle
 string map_tap_hint
 string map_title
+string nav_active
 string nav_history
 string nav_map
 string nav_profile
