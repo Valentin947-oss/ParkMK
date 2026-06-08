@@ -3914,6 +3914,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvActiveBadge
+id tvAvailableSpots
 id tvAvatarInitials
 id tvCost
 id tvEmpty
@@ -4254,6 +4255,7 @@ string androidx_startup
 string app_name
 string app_tagline
 string appbar_scrolling_view_behavior
+string available_spots
 string base
 string base_nl
 string bing

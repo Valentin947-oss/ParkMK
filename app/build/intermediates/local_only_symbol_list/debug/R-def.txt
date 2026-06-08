@@ -107,6 +107,7 @@ id tilPassword
 id tilPhone
 id tilPlate
 id tvActiveBadge
+id tvAvailableSpots
 id tvAvatarInitials
 id tvCost
 id tvEmpty
@@ -177,6 +178,7 @@ string add_vehicle_skip
 string add_vehicle_title
 string app_name
 string app_tagline
+string available_spots
 string btn_cancel
 string btn_confirm
 string currency

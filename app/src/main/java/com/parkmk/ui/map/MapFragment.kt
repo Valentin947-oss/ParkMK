@@ -144,6 +144,7 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.tvHours?.text     = "${spot.openFrom}–${spot.openUntil}"
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         b.mapView.controller.animateTo(GeoPoint(spot.latitude, spot.longitude))
+        b.tvAvailableSpots?.text = "${spot.totalSpots} ${getString(R.string.available_spots)}"
     }
 
     override fun onResume() {

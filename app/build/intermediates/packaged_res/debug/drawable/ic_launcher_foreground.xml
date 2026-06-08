@@ -2,23 +2,20 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
+    android:viewportWidth="512"
+    android:viewportHeight="512">
 
-    <!-- Позадина — темно сина -->
-    <path
-        android:fillColor="#1A1A2E"
-        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
-
-    <!-- Буква P — бела -->
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M35,25 L35,83 L45,83 L45,62 L58,62 C70,62 78,54 78,43 C78,32 70,25 58,25 Z
-                          M45,34 L57,34 C64,34 68,38 68,43 C68,48 64,52 57,52 L45,52 Z" />
-
-    <!-- Червена точка -->
     <path
         android:fillColor="#E94560"
-        android:pathData="M68,68 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0" />
+        android:pathData="
+            M196,120 L196,390
+            L228,390 L228,255
+            L305,255
+            C345,255 368,228 368,192
+            C368,150 345,120 305,120 Z
+            M228,152 L300,152
+            C320,152 336,168 336,192
+            C336,216 320,220 300,220
+            L228,220 Z"/>
 
 </vector>

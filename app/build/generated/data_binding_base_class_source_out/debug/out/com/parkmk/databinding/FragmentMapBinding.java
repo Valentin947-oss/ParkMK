@@ -38,6 +38,9 @@ public final class FragmentMapBinding implements ViewBinding {
   public final MapView mapView;
 
   @NonNull
+  public final TextView tvAvailableSpots;
+
+  @NonNull
   public final TextView tvHours;
 
   @NonNull
@@ -57,15 +60,16 @@ public final class FragmentMapBinding implements ViewBinding {
 
   private FragmentMapBinding(@NonNull CoordinatorLayout rootView, @NonNull LinearLayout bottomSheet,
       @NonNull MaterialButton btnParkHere, @NonNull LinearLayout layoutDetail,
-      @NonNull TextView layoutEmpty, @NonNull MapView mapView, @NonNull TextView tvHours,
-      @NonNull TextView tvPerMin, @NonNull TextView tvPrice, @NonNull TextView tvSpotAddr,
-      @NonNull TextView tvSpotName, @NonNull TextView tvZoneBadge) {
+      @NonNull TextView layoutEmpty, @NonNull MapView mapView, @NonNull TextView tvAvailableSpots,
+      @NonNull TextView tvHours, @NonNull TextView tvPerMin, @NonNull TextView tvPrice,
+      @NonNull TextView tvSpotAddr, @NonNull TextView tvSpotName, @NonNull TextView tvZoneBadge) {
     this.rootView = rootView;
     this.bottomSheet = bottomSheet;
     this.btnParkHere = btnParkHere;
     this.layoutDetail = layoutDetail;
     this.layoutEmpty = layoutEmpty;
     this.mapView = mapView;
+    this.tvAvailableSpots = tvAvailableSpots;
     this.tvHours = tvHours;
     this.tvPerMin = tvPerMin;
     this.tvPrice = tvPrice;
@@ -131,6 +135,12 @@ public final class FragmentMapBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvAvailableSpots;
+      TextView tvAvailableSpots = ViewBindings.findChildViewById(rootView, id);
+      if (tvAvailableSpots == null) {
+        break missingId;
+      }
+
       id = R.id.tvHours;
       TextView tvHours = ViewBindings.findChildViewById(rootView, id);
       if (tvHours == null) {
@@ -168,8 +178,8 @@ public final class FragmentMapBinding implements ViewBinding {
       }
 
       return new FragmentMapBinding((CoordinatorLayout) rootView, bottomSheet, btnParkHere,
-          layoutDetail, layoutEmpty, mapView, tvHours, tvPerMin, tvPrice, tvSpotAddr, tvSpotName,
-          tvZoneBadge);
+          layoutDetail, layoutEmpty, mapView, tvAvailableSpots, tvHours, tvPerMin, tvPrice,
+          tvSpotAddr, tvSpotName, tvZoneBadge);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

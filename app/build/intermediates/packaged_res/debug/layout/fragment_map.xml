@@ -123,7 +123,20 @@
                     android:textSize="14sp" android:textStyle="bold"
                     android:textColor="@color/park_red" />
             </LinearLayout>
-
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@drawable/ic_parking"
+                    android:tint="@color/park_green"
+                    android:layout_marginEnd="6dp" />
+                <TextView android:id="@+id/tvAvailableSpots"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/park_green" />
+            </LinearLayout>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnParkHere"
                 android:layout_width="match_parent" android:layout_height="50dp"

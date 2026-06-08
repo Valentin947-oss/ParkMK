@@ -102,7 +102,7 @@
     <string name="btn_confirm">Потврди</string>
     <string name="btn_cancel">Откажи</string>
     <string name="loading">Се вчитува…</string>
-
+    <string name="available_spots">слободни места</string>
     <string name="active_timer_hint">Притисни испрати SMS за да почне наплатата</string>
     <string name="sms_to_number">На број: 144414</string>
     <string name="no_vehicle">Немате возило → кликни</string>

@@ -104,7 +104,7 @@
     <string name="add_vehicle_plate_hint">License plate (e.g. BT-1234-AA)</string>
     <string name="add_vehicle_save">Save Vehicle</string>
     <string name="add_vehicle_skip">Skip for now</string>
-
+    <string name="available_spots">available spots</string>
     <string name="btn_confirm">Confirm</string>
     <string name="btn_cancel">Cancel</string>
     <string name="loading">Loading…</string>
