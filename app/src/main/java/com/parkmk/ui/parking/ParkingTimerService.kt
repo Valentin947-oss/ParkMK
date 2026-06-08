@@ -23,13 +23,16 @@ class ParkingTimerService : Service() {
         const val ACTION_STOP    = "STOP"
         const val EXTRA_START_MS = "start_ms"
         const val EXTRA_SPOT     = "spot_name"
+        const val EXTRA_SPOT_ID  = "spot_id"   // ← додај
         const val EXTRA_RATE     = "rate"
 
         var isRunning  = false
         var startMs    = 0L
         var spotName   = ""
+        var spotId     = "s1"               // ← додај
         var rate       = 0.0
     }
+
 
     private val handler = Handler(Looper.getMainLooper())
 

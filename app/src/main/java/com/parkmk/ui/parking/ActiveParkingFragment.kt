@@ -200,6 +200,7 @@ class ActiveParkingFragment : Fragment(R.layout.fragment_active_parking) {
                     putExtra(ParkingTimerService.EXTRA_START_MS, startMs)
                     putExtra(ParkingTimerService.EXTRA_SPOT, spot.name)
                     putExtra(ParkingTimerService.EXTRA_RATE, spot.pricePerMinute)
+                    putExtra(ParkingTimerService.EXTRA_SPOT_ID, spot.id)
                 }
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     requireContext().startForegroundService(serviceIntent)
