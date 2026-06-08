@@ -37,7 +37,15 @@ android {
         viewBinding = true
     }
 }
+configurations.all {
+    resolutionStrategy {
+        force("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2")
+    }
+}
 
+dependencies {
+    // ... остатокот
+}
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

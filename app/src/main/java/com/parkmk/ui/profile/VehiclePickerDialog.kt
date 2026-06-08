@@ -3,8 +3,6 @@ package com.parkmk.ui.profile
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.fragment.app.DialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
@@ -26,13 +24,20 @@ class VehiclePickerDialog(
                 .create()
         }
 
-        // Директно читај од Firestore без Repository
+        val loadingDialog = AlertDialog.Builder(requireContext())
+            .setTitle("Избери возило")
+            .setMessage("Се вчитуваат возилата...")
+            .setCancelable(true)
+            .create()
+
         Firebase.firestore
             .collection("users")
             .document(uid)
             .collection("vehicles")
             .get()
             .addOnSuccessListener { snapshot ->
+                if (!isAdded || context == null) return@addOnSuccessListener
+
                 val vehicles = snapshot.documents.mapNotNull { doc ->
                     Vehicle(
                         id          = doc.id,
@@ -45,14 +50,15 @@ class VehiclePickerDialog(
                     )
                 }
 
+                // Го затвораме loading-от
+                loadingDialog.dismiss()
+
                 if (vehicles.isEmpty()) {
-                    Handler(Looper.getMainLooper()).post {
-                        AlertDialog.Builder(requireContext())
-                            .setTitle("Нема возила")
-                            .setMessage("Додај возило во Профил → Додај ново возило")
-                            .setPositiveButton("OK", null)
-                            .show()
-                    }
+                    AlertDialog.Builder(requireContext())
+                        .setTitle("Нема возила")
+                        .setMessage("Додај возило во Профил → Додај ново возило")
+                        .setPositiveButton("OK", null)
+                        .show()
                     return@addOnSuccessListener
                 }
 
@@ -61,34 +67,24 @@ class VehiclePickerDialog(
                     else "    ${v.plate} — ${v.displayName}"
                 }.toTypedArray()
 
-                Handler(Looper.getMainLooper()).post {
-                    if (isAdded && context != null) {
-                        AlertDialog.Builder(requireContext())
-                            .setTitle("Избери возило")
-                            .setItems(labels) { _, index ->
-                                onVehicleSelected(vehicles[index])
-                            }
-                            .setNegativeButton("Откажи", null)
-                            .show()
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Избери возило")
+                    .setItems(labels) { _, index ->
+                        onVehicleSelected(vehicles[index])
                     }
-                }
+                    .setNegativeButton("Откажи", null)
+                    .show()
             }
             .addOnFailureListener { e ->
-                Handler(Looper.getMainLooper()).post {
-                    if (isAdded && context != null) {
-                        AlertDialog.Builder(requireContext())
-                            .setTitle("Грешка")
-                            .setMessage(e.message)
-                            .setPositiveButton("OK", null)
-                            .show()
-                    }
-                }
+                if (!isAdded || context == null) return@addOnFailureListener
+                loadingDialog.dismiss()
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Грешка")
+                    .setMessage(e.message)
+                    .setPositiveButton("OK", null)
+                    .show()
             }
 
-        // Враќа празен dialog додека се вчитува
-        return AlertDialog.Builder(requireContext())
-            .setTitle("Избери возило")
-            .setMessage("Се вчитуваат возилата...")
-            .create()
+        return loadingDialog
     }
 }
